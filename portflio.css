@@ -1,10 +1,29 @@
+* {
+  margin: 0;
+  padding:0;
+}
+
 header {
   background-color: #3d3838;
-  height: 81px;
-  
+  height: 120px;
+
 
 
 }
 header p {
   color: #ded4d4;
+}
+header #headerLogo  {
+  margin-left: 20px;
+  margin-top: 10px;
+
+}
+header ul{
+  list-style-type: none;
+}
+
+header ul li{
+  display: inline;
+  padding: 5px 10px 5px 10px;
+  color: white;
 }
