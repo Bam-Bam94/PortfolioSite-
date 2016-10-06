@@ -2,6 +2,10 @@
   margin: 0;
   padding:0;
 }
+html{
+  height: 100%;
+}
+
 
 header {
   background-color: #3d3838;
@@ -26,4 +30,14 @@ header ul li{
   display: inline;
   padding: 5px 10px 5px 10px;
   color: white;
+}
+
+div#CenterText{
+  margin: auto;
+  text-align: center;
+  height: 100%;
+  position: absolute;
+  margin-top: 300px;
+
+
 }
