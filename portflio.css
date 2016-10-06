@@ -4,35 +4,50 @@
 }
 html{
   height: 100%;
-  background-color: #1e1e79
+
 }
 
 
 header {
-  background-color: #181c1f;;
-  height: 150px;
+  background-color: #52bb71;
+  height: 380px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 
 
 }
 a:link{
   text-decoration: none;
-  color: #ded4d4;
+  color: white;
+  margin : 10px 10px 10px 10px;
 }
 a:visited {
   text-decoration: none;
-  color: #ded4d4;
+  color: white;
+  margin: 10px 10px 10px 10px;
 }
 
 
 
-header p {
-  color: #ded4d4;
-  vertical-align: middle;
+header h1 {
+  color: white;
   text-align: center;
-  display: inline;
+  display: block;
+  padding-top: 100px;
+  font-family: Comic sans ; , sans-serif;
+  font-size: 35px;
+  font-weight: 100;
+  margin-right: 100px;
+  margin-left: 100px;
+}
+header #belowBlurb{
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 40px;
+  text-align: center;
 }
 header #headerLogo  {
-  margin-left: 20px;
+  margin-left: 100px;
   margin-top: 10px;
   display: inline;
 
@@ -42,13 +57,18 @@ header #headerLogo  {
 header #navbar{
   display: inline;
   float: right;
+  padding-top: 50px;
+  font-weight: bolder;
+  padding-right: 75px
+
 
 }
 
 header ul li{
   display: inline;
-  padding: 5px 10px 5px 10px;
+  padding: 10px 10px 10px 10px;
   color: white;
+  font-size: 20px;
 }
 
 div#CenterText{
