@@ -9,21 +9,39 @@ html{
 
 header {
   background-color: #3d3838;
-  height: 120px;
-
+  height: auto;
 
 
 }
+a:link{
+  text-decoration: none;
+  color: #ded4d4;
+}
+a:visited {
+  text-decoration: none;
+  color: #ded4d4;
+}
+
+
+
 header p {
   color: #ded4d4;
+  vertical-align: middle;
+  text-align: center;
+  display: inline;
 }
 header #headerLogo  {
   margin-left: 20px;
   margin-top: 10px;
+  display: inline;
+
+
 
 }
-header ul{
-  list-style-type: none;
+header #navbar{
+  display: inline;
+  float: right;
+
 }
 
 header ul li{
@@ -38,6 +56,7 @@ div#CenterText{
   height: 100%;
   position: absolute;
   margin-top: 300px;
+
 
 
 }
