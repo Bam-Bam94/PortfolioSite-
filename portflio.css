@@ -4,12 +4,13 @@
 }
 html{
   height: 100%;
+  background-color: #1e1e79
 }
 
 
 header {
-  background-color: #3d3838;
-  height: auto;
+  background-color: #181c1f;;
+  height: 150px;
 
 
 }
@@ -51,11 +52,22 @@ header ul li{
 }
 
 div#CenterText{
-  margin: auto;
   text-align: center;
   height: 100%;
-  position: absolute;
+
   margin-top: 300px;
+  width: 100%;
+}
+
+div#CenterText ul {
+  padding-top: 40px;
+}
+
+div#CenterText ul li {
+  display: inline;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: center;
 
 
 
