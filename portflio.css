@@ -110,10 +110,23 @@ div#profileText ul li {
 
 
 }
+div#tableRow2 {
+    background: #f2f2f2;
+    color: #3c3c3c;
+
+    display: block;
+}
+div#tableRow2LeftBox  li , div#tableRow2LeftBox  h1 {
+ color: #3c3c3c;
+ display: block;
+ font-size: 20px;
+}
+
 footer {
   font-size: 10px;
   text-align: center;
   margin: auto;
   background-color: #52bb71;
   padding: 15px;
+  display: block;
 }
