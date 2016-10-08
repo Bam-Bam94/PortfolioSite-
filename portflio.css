@@ -8,11 +8,12 @@ html{
 }
 
 
-header {
+div.topNav {
   background-color: #52bb71;
   height: 380px;
   padding-top: 30px;
   padding-bottom: 30px;
+  margin-bottom: 100px;
 
 
 }
@@ -29,9 +30,9 @@ a:visited {
 
 
 
-header h1 {
-  color: white;
+div.topNav h1    {
   text-align: center;
+  color: white;
   display: block;
   padding-top: 100px;
   font-family: Comic sans ; , sans-serif;
@@ -40,13 +41,14 @@ header h1 {
   margin-right: 100px;
   margin-left: 100px;
 }
-header #belowBlurb{
+
+ #belowBlurb{
   margin-left: auto;
   margin-right: auto;
   padding-top: 40px;
   text-align: center;
 }
-header #headerLogo  {
+ #headerLogo  {
   margin-left: 100px;
   margin-top: 10px;
   display: inline;
@@ -54,7 +56,7 @@ header #headerLogo  {
 
 
 }
-header #navbar{
+ #navbar{
   display: inline;
   float: right;
   padding-top: 50px;
@@ -64,30 +66,46 @@ header #navbar{
 
 }
 
-header ul li{
+ ul li{
   display: inline;
   padding: 10px 10px 10px 10px;
   color: white;
   font-size: 20px;
 }
 
-div#leftBox{
+
+div#profileText h2{
   text-align: center;
   height: 100%;
 
-  margin-top: 300px;
   width: 100%;
+
+}
+div#profileText h1{
+  text-align: center;
+  height: 100%;
+  margin: 0
+  width: 100%;
+  color: black;
+
+
+}
+div#profileText {
+  text-align: center;
+  color: black:
 }
 
-div#leftBox ul {
+div#profileText ul {
   padding-top: 40px;
+  text-align: center;
 }
 
-div#leftBox ul li {
+div#profileText ul li {
   display: inline;
   margin-left: 20px;
   margin-right: 20px;
   text-align: center;
+  color: black;
 
 
 
