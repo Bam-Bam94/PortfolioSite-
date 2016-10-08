@@ -71,7 +71,7 @@ header ul li{
   font-size: 20px;
 }
 
-div#CenterText{
+div#leftBox{
   text-align: center;
   height: 100%;
 
@@ -79,11 +79,11 @@ div#CenterText{
   width: 100%;
 }
 
-div#CenterText ul {
+div#leftBox ul {
   padding-top: 40px;
 }
 
-div#CenterText ul li {
+div#leftBox ul li {
   display: inline;
   margin-left: 20px;
   margin-right: 20px;
