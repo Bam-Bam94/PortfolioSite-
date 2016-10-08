@@ -92,3 +92,10 @@ div#CenterText ul li {
 
 
 }
+footer {
+  font-size: 10px;
+  text-align: center;
+  margin: auto;
+  background-color: #52bb71;
+  padding: 15px;
+}
