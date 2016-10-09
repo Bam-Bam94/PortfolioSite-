@@ -6,6 +6,9 @@ html{
   height: 100%;
 
 }
+h1{
+  color: black;
+}
 
 
 div.topNav {
@@ -113,15 +116,46 @@ div#profileText ul li {
 div#tableRow2 {
     background: #f2f2f2;
     color: #3c3c3c;
+    margin-right: 0px;
+    width: 50%;
+    display: table;
+    width: 100%;
 
-    display: block;
 }
-div#tableRow2LeftBox  li , div#tableRow2LeftBox  h1 {
+div#tableRow2LeftBox{
+  display: table-cell;
+  width: 50%;
+}
+
+div#tableRow2LeftBox  li   {
  color: #3c3c3c;
  display: block;
  font-size: 20px;
-}
 
+
+}
+div#tableRow2LeftBox h1{
+  color: black;
+
+
+}
+div#tableRow2RightBox {
+padding-top: 0px;
+display: table-cell;
+width: 50%;
+
+}
+div#tableRow2RightBox ul li   {
+  color: black;
+  display: block;
+
+}
+div#tableRow2RightBox h1{
+  color: black;
+  padding-top: 0px;
+
+
+}
 footer {
   font-size: 10px;
   text-align: center;
@@ -129,4 +163,5 @@ footer {
   background-color: #52bb71;
   padding: 15px;
   display: block;
+  width: 100%;
 }
