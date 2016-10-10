@@ -5,6 +5,12 @@
 html{
   height: 100%;
 
+
+}
+div.wrapper{
+
+  min-width: 960px;
+
 }
 h1{
   color: black;
@@ -17,6 +23,16 @@ div.topNav {
   padding-top: 30px;
   padding-bottom: 30px;
   margin-bottom: 100px;
+
+
+}
+.navbar{
+ display: block;
+ float: right;
+ padding-top: 50px;
+ font-weight: bolder;
+ padding-right: 75px;
+
 
 
 }
@@ -59,15 +75,7 @@ div.topNav h1    {
 
 
 }
- #navbar{
-  display: inline;
-  float: right;
-  padding-top: 50px;
-  font-weight: bolder;
-  padding-right: 75px
 
-
-}
 
  ul li{
   display: inline;
@@ -164,4 +172,24 @@ footer {
   padding: 15px;
   display: block;
   width: 100%;
+}
+div.topNav#Secondpages{
+  background: white;
+  height: 150px;
+  margin: 0px;
+
+}
+
+div.topNav#Secondpages a:link, div.topNav#Secondpages a:visited {
+  color: black;
+}
+div.SecondPageHeadings {
+  height: 70px;
+  background-color: #52bb71;
+
+}
+div.SecondPageHeadings h1{
+  color: white;
+  margin-left: 100px;
+  text-align: left;
 }
