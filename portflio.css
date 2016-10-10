@@ -18,7 +18,7 @@ h1{
 
 
 div.topNav {
-  background-color: #52bb71;
+  background-color: #33cd74;
   height: 380px;
   padding-top: 30px;
   padding-bottom: 30px;
@@ -27,7 +27,7 @@ div.topNav {
 
 }
 .navbar{
- display: block;
+ display: inline;
  float: right;
  padding-top: 50px;
  font-weight: bolder;
@@ -168,14 +168,14 @@ footer {
   font-size: 10px;
   text-align: center;
   margin: auto;
-  background-color: #52bb71;
+  background-color: #33cd74;
   padding: 15px;
   display: block;
   width: 100%;
 }
 div.topNav#Secondpages{
   background: white;
-  height: 150px;
+  height: 100px;
   margin: 0px;
 
 }
@@ -185,11 +185,11 @@ div.topNav#Secondpages a:link, div.topNav#Secondpages a:visited {
 }
 div.SecondPageHeadings {
   height: 70px;
-  background-color: #52bb71;
+  background-color: #33cd74;
 
 }
 div.SecondPageHeadings h1{
   color: white;
-  margin-left: 100px;
+  margin-left: 200px;
   text-align: left;
 }
