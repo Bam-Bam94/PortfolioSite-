@@ -193,3 +193,44 @@ div.SecondPageHeadings h1{
   margin-left: 200px;
   text-align: left;
 }
+div.content{
+  margin-left: auto;
+  margin-right: auto;
+  padding : 20px;
+  font-size: 1em;
+  line-height: 1.8;
+  max-width: 680px;
+  word-break: break-word;
+
+
+}
+div.content p {
+  display: block
+}
+div#skillBadgesBar  {
+  display: inline;
+  height:100px;
+
+}
+div#skillBadgesBar div{
+  display: inline-block;
+  text-align: center;
+
+}
+div.logo{
+  padding: 50px;
+}
+strong {
+display: block;
+}
+
+
+
+div#skillBadgesBar.logo{
+  padding: 0px;
+  margin: 0px;
+}
+div.logo {
+  max-width: 131px;
+  padding: 50px;
+}
