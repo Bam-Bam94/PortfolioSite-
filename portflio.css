@@ -234,3 +234,25 @@ div.logo {
   max-width: 131px;
   padding: 50px;
 }
+
+div#download  {
+  font-family: 'Trirong', serif;
+  text-align: center;
+  display: block;
+  color: #878686;
+
+}
+div#download button{
+  background: transparent;
+  border: 2px solid #33cd74;
+  color: #33cd74;
+  height: 50px;
+  width: 150px;
+  font-family: 'Trirong', serif;
+  margin: 50px;
+  cursor: pointer;
+}
+div#download button a:link , div#download button a:visited{
+  color: #33cd74;
+  font-family: 'Trirong', serif;
+}
