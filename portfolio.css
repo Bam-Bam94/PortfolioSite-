@@ -256,3 +256,10 @@ div#download button a:link , div#download button a:visited{
   color: #33cd74;
   font-family: 'Trirong', serif;
 }
+div.EmailForm div#messageForm  {
+  display: inline-block;
+}
+
+div.EmailForm div#contactInfo  {
+  display: inline-block;
+}
