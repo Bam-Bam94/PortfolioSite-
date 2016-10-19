@@ -7,9 +7,14 @@ html{
 
 
 }
+body{
+  height: 100%;
+}
 div.wrapper{
-
+  min-height: 100%;
   min-width: 960px;
+  position: relative;
+
 
 }
 h1{
@@ -165,13 +170,18 @@ div#tableRow2RightBox h1{
 
 }
 footer {
+  position: absolute;
   font-size: 10px;
   text-align: center;
-  margin: auto;
   background-color: #33cd74;
-  padding: 15px;
-  display: block;
+  padding: 1rem;
   width: 100%;
+  bottom: 0;
+  margin-top: 80px;
+
+
+
+
 }
 div.topNav#Secondpages{
   background: white;
@@ -255,6 +265,10 @@ div#download button{
 div#download button a:link , div#download button a:visited{
   color: #33cd74;
   font-family: 'Trirong', serif;
+}
+div.EmailForm {
+  margin-bottom: 50px;
+
 }
 div.EmailForm div#messageForm  {
   display: inline-block;
