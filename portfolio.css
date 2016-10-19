@@ -258,8 +258,15 @@ div#download button a:link , div#download button a:visited{
 }
 div.EmailForm div#messageForm  {
   display: inline-block;
+  vertical-align: text-top;
 }
 
 div.EmailForm div#contactInfo  {
   display: inline-block;
+  vertical-align: text-top;
+  padding: 20px;
+
+}
+div.EmailForm div#contactInfo div.sideBox{
+  padding-bottom: 25px;
 }
