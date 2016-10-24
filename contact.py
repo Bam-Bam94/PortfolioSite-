@@ -4,9 +4,23 @@ print ("content-type:text/html\n")
 
 
 import smtplib
+import cgi
 import django
+name = ""
+email = ""
+phoneNumber = ""
+message = ""
+form = cgi.FieldStorage()
+if form.getvalue('message'):
+    message = form.getvalue('message')
+if form.getvalue('email'):
+    email = form.getvalue('email')
+if form.getvalue('phoneNumber'):
+    phoneNumber = form.getvalue('phoneNumber')
+if form.getvalue('name'):
+    name = form.getvalue('name')
 
-content = "example email stuff"
+content = "name : " + name + "\n" + 'message : '  + message + "\n"  + "Phone Number : " + phoneNumber + "\n"  + "E-mail : " + email
 
 mail = smtplib.SMTP("smtp.gmail.com",587)
 

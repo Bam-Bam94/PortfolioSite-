@@ -284,3 +284,14 @@ div.EmailForm div#contactInfo  {
 div.EmailForm div#contactInfo div.sideBox{
   padding-bottom: 25px;
 }
+
+#sendButton{
+font-family: 'Trirong', serif;
+background: transparent;
+border: 2px solid #33cd74;
+color: #33cd74;
+height: 50px;
+width: 150px;
+font-family: 'Trirong', serif;
+margin-bottom: 50px;
+}
