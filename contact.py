@@ -20,7 +20,7 @@ if form.getvalue('phoneNumber'):
 if form.getvalue('name'):
     name = form.getvalue('name')
 
-content = "name : " + name + "\n" + 'message : '  + message + "\n"  + "Phone Number : " + phoneNumber + "\n"  + "E-mail : " + email
+content = "\n" + 'message : '  + message + "\n"  + "Phone Number : " + phoneNumber + "\n"  + "E-mail : " + email + "\n" "name : " + name + "\n" 
 
 mail = smtplib.SMTP("smtp.gmail.com",587)
 
