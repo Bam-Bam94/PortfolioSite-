@@ -1,4 +1,10 @@
+#!/usr/bin/python
+print ("content-type:text/html\n")
+
+
+
 import smtplib
+import django
 
 content = "example email stuff"
 
