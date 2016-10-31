@@ -377,11 +377,33 @@ div#skillBoxes {
   width: 480px;
   z-index: 9999;
   border-radius: 10px;
-  background-color: #7c7d7e;
+  background-color: #1e1e1e;
+  align-items: center;
+  opacity: 1;
 }
-#skillBoxAlert-Header {
-  background-color: #33cd74;
+#skillBoxAlert-header  {
+  display: inline;
+  color: white;
   font-size: 20px;
   padding: 10px;
   margin: 10px 10px 0px 10px;
+  align-self:  center;
+}
+#skillBoxAlert-header h1 {
+  text-align: center;
+  color: white;
+}
+#skillBoxAlert-body button{
+  display: block;
+  margin: auto;
+  margin-bottom: 20px;
+
+}
+#DescriptionOfSkills{
+
+  margin-bottom: 50px;
+}
+#DescriptionOfSkills li {
+  margin-bottom: 10px;
+  display: block;
 }

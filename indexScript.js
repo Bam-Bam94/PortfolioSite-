@@ -5,10 +5,10 @@ function showSkills() {
   whiteBackground.style.display = "block";
   skillBoxAlert.style.display = "block";
 
-  var winWidith = window.innerWidth;
+  var winWidth = window.innerWidth;
   var winHeight = window.innerHeight;
 
-  skillBoxAlert.style.left = (width/2);
+  skillBoxAlert.style.left = (winWidth/2) - 480/2 + "px";
   skillBoxAlert.style.top = "150px";
 }
 
