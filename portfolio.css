@@ -407,3 +407,38 @@ div#skillBoxes {
   margin-bottom: 10px;
   display: block;
 }
+#ProjectBoxAlert {
+  position: fixed;
+  width: 480px;
+  z-index: 9999;
+  border-radius: 10px;
+  background-color: #1e1e1e;
+  align-items: center;
+  opacity: 1;
+}
+#ProjectBoxAlert-header  {
+  display: inline;
+  color: white;
+  font-size: 20px;
+  padding: 10px;
+  margin: 10px 10px 0px 10px;
+  align-self:  center;
+}
+#ProjectBoxAlert-header h1 {
+  text-align: center;
+  color: white;
+}
+#ProjectBoxAlert-body button{
+  display: block;
+  margin: auto;
+  margin-bottom: 20px;
+
+}
+#DescriptionOfProjects{
+
+  margin-bottom: 50px;
+}
+#DescriptionOfProjects li {
+  margin-bottom: 10px;
+  display: block;
+}
