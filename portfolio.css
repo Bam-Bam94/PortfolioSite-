@@ -442,3 +442,11 @@ div#skillBoxes {
   margin-bottom: 10px;
   display: block;
 }
+#map {
+  height: 100%;
+  margin: 0;
+
+
+  height: 1000px;
+  width: 1000px;
+}
