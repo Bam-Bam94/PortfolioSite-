@@ -9,7 +9,7 @@ function showSkills() {
   var winHeight = window.innerHeight;
 
   skillBoxAlert.style.left = (winWidth/2) - 480/2 + "px";
-  skillBoxAlert.style.top = "150px";
+  skillBoxAlert.style.top =  (winHeight/2) - 480/2 + "px";
 }
 
 function Back() {
@@ -32,5 +32,5 @@ function showProjects() {
   var winHeight = window.innerHeight;
 
   skillBoxAlert.style.left = (winWidth/2) - 480/2 + "px";
-  skillBoxAlert.style.top = "150px";
+  skillBoxAlert.style.top = (winHeight/2) - 480/2 + "px";
 }
