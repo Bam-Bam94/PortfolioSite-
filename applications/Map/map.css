@@ -14,13 +14,23 @@ html, body{
 height: 100%;
 width: 100%;
 background-color: #383737;
+display: table;
+align-items: center;
+
+}
+#mapApp {
+  display: table;
+
 }
 #map {
   height: 300px;
   width: 700px;
   align-self: center;
+
 }
-#mapApp{
-  background-color: #0b0b0b;
+
+#dialogBox{
+  background-color: white;
+  min-height: 200px;
 
 }
