@@ -1,5 +1,5 @@
 
-function displayMap(){
+/*function displayMap(){
   var mapDisplay =document.getElementById('map');
 
   mapDisplay.style.display = "block";
@@ -32,6 +32,6 @@ function displayMap(){
    var map = new google.maps.Map(document.getElementById('map'), {zoom: 11, center: pittsburgh});
    var marker = new google.maps.Marker({position: pittsburgh, map: map});
 
-   displayMap();
+  // displayMap();
    //displayDialogBox();
 }
