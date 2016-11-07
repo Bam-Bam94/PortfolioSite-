@@ -13,7 +13,7 @@ html, body{
 #wrapper{
 height: 100%;
 width: 100%;
-background-color: #383737;
+background-color: #336699 ;
 position: relative;
 
 }
@@ -25,7 +25,8 @@ position: relative;
   top: 50%;
   left: 50%;
   margin-right: -50%;
-  transform: translate(-50%, -50%)
+  transform: translate(-50%, -50%);
+
 }
 #map {
   height: 300px;
@@ -34,10 +35,50 @@ position: relative;
   margin-left: auto;
   margin-right: auto;
 
+
 }
 
 #dialogBox{
-  background-color: white;
+  background-color: #999999;
   min-height: 200px;
+  width: 1000px;
+  margin-top: 50px;
+  position: relative;
+  border-radius: 25px;
 
+
+}
+#dialogBox-content {
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+
+}
+#leftArrow{
+display: inline-block;
+padding-left:  20px;
+}
+
+
+#rightArrow {
+
+  display: inline-block;
+  padding-right: 20px;
+  float: right;
+
+}
+#text {
+  display: inline-block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+
+}
+p{
+  color: black;
 }
