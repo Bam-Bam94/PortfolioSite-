@@ -9,6 +9,7 @@
     <link type="text/css" rel="stylesheet" href="map.css">
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfdE0fMOhJ1gmRHzGYGfB4fd4vnRZYaZw&callback=initMap"></script>
     <script type="text/javascript" src="interactiveMapScript.js"></script>
+    <script type="text/javascript" src="mapAppScript.js"></script>
   </head>
   <body>
     <div id="wrapper">
@@ -21,13 +22,13 @@
         <div id="dialogBox">
           <div id="dialogBox-content">
           <div id="leftArrow">
-            <img src="images/leftArrow.png" alt="left arrow">
+            <img src="images/leftArrow.png" alt="left arrow" onclick="handleLeftArrow()">
           </div>
           <div id="text">
               <p>hello</p>
           </div>
           <div id="rightArrow">
-            <img src="images/rightArrow.png" alt="right arrow" >
+            <img src="images/rightArrow.png" alt="right arrow" onclick="handleRightArrow()"   >
           </div>
           </div>
 
