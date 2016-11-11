@@ -46,6 +46,7 @@ var view = {
 };
 
 var controller = {
+    alert: alert("hello world"),
 
     ProcessRequest: function(side){
         if (side="right"){
@@ -62,7 +63,8 @@ var controller = {
 };
 
 function handleRightArrow(){
-  controller.ProcessRequest("right");
+
+  controller.alert;
 
 };
 
@@ -70,3 +72,14 @@ function handleLeftArrow(){
   controller.ProcessRequest("left");
 
 };
+
+window.onload = addListeners;
+
+function addListeners() {
+  var rightArrow = document.getElementById('rightArrow');
+  rightArrow.onclick = handleRightArrow;
+
+  var leftArrow = document.getElementById("leftArrow");
+  leftArrow.onclick = handleLeftArrow;
+
+}
