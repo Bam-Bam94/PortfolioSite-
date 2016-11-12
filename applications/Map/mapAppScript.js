@@ -15,22 +15,21 @@ var model = {
   slide: [1,2,3,4,5],
   slidePostion : 0,
   slidePostionMover: function(direction){
-                  while ( this.slide[this.slidePostion]){
                   if (direction == "right"){
-                    //fix bug if at an end of the array
-                    return model.slidePostion+ 1;
+                    model.slidePostion = model.slidePostion + 1;
+                    console.log(this.slidePostion);
 
                   } else if (direction == "left") {
                       //fix bug if at an end of the array
-                      this.slidePostion--;
+                      this.slidePostion - 1;
                   }
-                };
+                },
 
 
-  },
+  };
 
 
-};
+
 
 var view = {
     displayMessage : function(msg){
