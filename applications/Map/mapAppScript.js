@@ -18,6 +18,7 @@ var model = {
                   if (direction == "right"){
                     model.slidePostion = model.slidePostion + 1;
                     console.log(this.slidePostion);
+                    view.slideText;
 
                   } else if (direction == "left") {
                       //fix bug if at an end of the array
@@ -34,23 +35,23 @@ var model = {
 var view = {
     displayMessage : function(msg){
       var messageArea = document.getElementById("text")
-      messageArea = msg;
+      messageArea.innerHTML = msg;
 
     },
 
     position: model.slidePostion,
     slideText: function() {
-          if (this.position == 0){
+          if (model.position == 0){
               this.displayMessage("1");
-          }else if (this.position == 1){
+          }else if (model.position == 1){
               this.displayMessage("2");
-          }else if (this.position == 2){
+          }else if (model.position == 2){
               this.displayMessage("3");
-          }else if (this.position == 3){
+          }else if (model.position == 3){
               this.displayMessage("4");
-          }else if (this.position == 4){
+          }else if (model.position == 4){
               this.displayMessage("5");
-          }else if (this.position == 5){
+          }else if (model.position == 5){
               this.displayMessage("6");
           }
 
