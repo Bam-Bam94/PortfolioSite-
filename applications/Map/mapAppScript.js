@@ -42,17 +42,17 @@ var view = {
     position: model.slidePostion,
     slideText: function() {
           if (model.slidePostion == 0){
-              this.displayMessage("1");
+              this.displayMessage("<h2>WELCOME!</h2>");
           }else if (model.slidePostion == 1){
-              this.displayMessage("2");
+              this.displayMessage("<p>Above is ariel view of the city of Pittsburgh which is my hometown. I highlighted important landmarks and places that were important to me while growing up. Each position will be marked on the map as you click through the slides. Each marker is clickable and will have more information about the marker.</p>");
           }else if (model.slidePostion == 2){
-              this.displayMessage("3");
+              this.displayMessage("<p></p>");
           }else if (model.slidePostion == 3){
-              this.displayMessage("4");
+              this.displayMessage("<p></p>");
           }else if (model.slidePostion == 4){
-              this.displayMessage("5");
+              this.displayMessage("<p></p>");
           }else if (model.slidePostion == 5){
-              this.displayMessage("6");
+              this.displayMessage("Feel free to use the map above to explore around the city ");
           }
 
     },
