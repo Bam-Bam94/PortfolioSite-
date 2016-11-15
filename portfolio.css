@@ -442,11 +442,26 @@ div#skillBoxes {
   margin-bottom: 10px;
   display: block;
 }
-#map {
-  height: 100%;
-  margin: 0;
+div.PortfolioProjects{
+    display: table;
+    padding-bottom: 100px;
 
 
-  height: 200px;
-  width: 200px;
+}
+
+div.PortfolioProjects img {
+display: table-cell;
+height: 200px;
+width: 200px;
+padding-left: 100px;
+
+
+}
+
+div.portfolioProjectsDescription{
+  display: table-cell;
+  padding-top:  0px;
+  vertical-align: top;
+
+
 }
