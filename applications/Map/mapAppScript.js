@@ -10,6 +10,36 @@ function addListeners() {
 };
 
 
+function initMap() {
+  var pittsburgh = {lat: 40.44062479999999, lng: -79.99588640000002};
+  var map = new google.maps.Map(document.getElementById('map'), {zoom: 10, center: pittsburgh});
+  var marker = new google.maps.Marker({position: pittsburgh, map: map});
+
+
+}
+
+var allMarkers = {
+
+        pittsburghLocations: {  upperStClair: {lat: 40.320715, lng: -80.086033},
+                                southSideFlats: {lat :40.428535, lng: -79.976918},
+                                thePoint: { lat: 40.441797, lng: -80.012784},
+                                stripDistrict: { lat: 40.455410, lng: -79.977718},
+                                oakland: { lat:40.441373, lng: -79.95723},
+                                heinzField: {lat:40.446928,lng: -80.015739},
+                                PPGPaintsArena: {lat:40.439577, lng:-79.989284}
+
+        },
+
+          personalLocations:{ USCHighschool: {lat: 40.334751, lng:-80.070774},
+                              RE360: {lat: 40.421170, lng: -79.992824},
+                              chesterField: { lat:40.440282, lng:-79.963111},
+                              Duquesne: {lat:40.436801, lng: -79.990828},
+                              Rockwell: {lat:40.437545, lng: -79.993642}
+                            }
+
+};
+
+
 
 var model = {
   slide: [1,2,3,4,5],
