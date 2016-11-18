@@ -9,6 +9,9 @@ function addListeners() {
 
 };
 
+var map;
+
+var markers = [];
 
 function initMap() {
   var pittsburgh = {lat: 40.44062479999999, lng: -79.99588640000002};
@@ -16,9 +19,9 @@ function initMap() {
   var marker = new google.maps.Marker({position: pittsburgh, map: map});
 
 
-}
+};
 
-var allMarkers = {
+var markerLocation = {
 
         pittsburghLocations: {  upperStClair: {lat: 40.320715, lng: -80.086033},
                                 southSideFlats: {lat :40.428535, lng: -79.976918},
@@ -27,8 +30,7 @@ var allMarkers = {
                                 oakland: { lat:40.441373, lng: -79.95723},
                                 heinzField: {lat:40.446928,lng: -80.015739},
                                 PPGPaintsArena: {lat:40.439577, lng:-79.989284}
-
-        },
+},
 
           personalLocations:{ USCHighschool: {lat: 40.334751, lng:-80.070774},
                               RE360: {lat: 40.421170, lng: -79.992824},
@@ -68,6 +70,18 @@ var view = {
       messageArea.innerHTML = msg;
 
     },
+    createMarkers : function(markerLocation){
+                    var marker = new.google.maps.Marker({
+                      position : markerLocation;
+                      map: map
+
+                    });
+
+
+    },
+
+
+
 
     position: model.slidePostion,
     slideText: function() {
@@ -75,6 +89,7 @@ var view = {
               this.displayMessage("<h2>WELCOME!</h2>");
           }else if (model.slidePostion == 1){
               this.displayMessage("<p>Above is ariel view of the city of Pittsburgh which is my hometown. I highlighted important landmarks and places that were important to me while growing up. Each position will be marked on the map as you click through the slides. Each marker is clickable and will have more information about the marker.</p>");
+              this.createMarkers(markerLocation.pittsburghLocations);
           }else if (model.slidePostion == 2){
               this.displayMessage("<p>First, let us look at some the famous neighborhood and landmarks of the city of Pittsburgh that have had a large impact on my life. Feel free to examine the areas by clicking the markers on the map!</p>");
           }else if (model.slidePostion == 3){
@@ -82,7 +97,7 @@ var view = {
           }else if (model.slidePostion == 4){
               this.displayMessage("<p>Here we have these same locations but with the addition of the neighborhoods and landmarks added back in. </p>");
           }else if (model.slidePostion == 5){
-              this.displayMessage('"<p>Feel free to use the map above to explore around the city! If you have any questions feel free to reach out to me using the </p> <a href ="../../contact.html">contact form</a>');
+              this.displayMessage('<p>Feel free to use the map above to explore around the city! If you have any questions feel free to reach out to me using the </p> <a href ="../../contact.html">contact form</a>');
           }
 
     },
