@@ -1,13 +1,13 @@
 var object = {
 
   name: "mike",
-  age: 22,
+  age: ["kevin ", "smith"],
   lastName: "Calabrese"
 
 }
 
-for (props in object ){
+for (boom in object ){
 
-  console.log(object[props]);
+  console.log(object[boom]);
 
 }

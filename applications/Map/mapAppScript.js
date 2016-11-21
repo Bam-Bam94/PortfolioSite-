@@ -1,25 +1,34 @@
 window.onload = addListeners;
+var map;
+var markers = [];
+var rightArrow ;
+var leftArrow ;
 
 function addListeners() {
-  var rightArrow = document.getElementById('rightArrow');
+  rightArrow = document.getElementById('rightArrow');
   rightArrow.onclick = handleRightArrow;
 
-  var leftArrow = document.getElementById("leftArrow");
+  leftArrow = document.getElementById("leftArrow");
   leftArrow.onclick = handleLeftArrow;
 
 };
 
-var map;
-
-var markers = [];
 
 function initMap() {
   var pittsburgh = {lat: 40.44062479999999, lng: -79.99588640000002};
   var map = new google.maps.Map(document.getElementById('map'), {zoom: 10, center: pittsburgh});
   var marker = new google.maps.Marker({position: pittsburgh, map: map});
+  var rightArrow = document.getElementById('rightArrow');
+  var leftArrow = leftArrow = document.getElementById("leftArrow");
 
+  //function updateMarker()
+
+  google.maps.event.addDomListener(rightArrow, 'click', function () {console.log (model.slidePostion);})
 
 };
+ //new google.maps.Marker({position: markerLocation.pittsburghLocations.upperStClair, map: map});
+
+
 
 var markerLocation = {
 
@@ -49,7 +58,7 @@ var model = {
   slidePostionMover: function(direction){
                   if (direction == "right"){
                     model.slidePostion = model.slidePostion + 1;
-                    console.log(this.slidePostion);
+
 
 
                   } else if (direction == "left") {
@@ -71,11 +80,7 @@ var view = {
 
     },
     createMarkers : function(markerLocation){
-                    var marker = new.google.maps.Marker({
-                      position : markerLocation;
-                      map: map
 
-                    });
 
 
     },
