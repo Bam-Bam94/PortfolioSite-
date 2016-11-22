@@ -3,6 +3,7 @@ var map;
 var markers = [];
 var rightArrow ;
 var leftArrow ;
+var x = 1;
 
 function addListeners() {
   rightArrow = document.getElementById('rightArrow');
@@ -15,25 +16,28 @@ function addListeners() {
 
 
 function initMap() {
+  var x = 1;
   var pittsburgh = {lat: 40.44062479999999, lng: -79.99588640000002};
   var map = new google.maps.Map(document.getElementById('map'), {zoom: 10, center: pittsburgh});
   var marker = new google.maps.Marker({position: pittsburgh, map: map});
   var rightArrow = document.getElementById('rightArrow');
   var leftArrow = leftArrow = document.getElementById("leftArrow");
-  new google.maps.Marker({position: markerLocation.pittsburghLocations.upperStClair, map: map});
 
-  function updateMarker(location){
-      if (location == 1 ){
-        for (prop in markerLocation.pittsburghLocations){
-             new google.maps.Marker({position: markerLocation.pittsburghLocations[prop], map: map});
-        };
+// adds pittsburgh neighborhoods to the Map
+  google.maps.event.addDomListener(rightArrow || leftArrow, 'click', function (location){
+    if (model.slidePostion == 1 || model.slidePostion == 4 || model.slidePostion == 3  ){
+      location = markerLocation.pittsburghLocations ;
+      for (prop in location){
+        new google.maps.Marker({position: location[prop], map: map});
       };
-  };
-  function log (){
-    console.log("hello");
-  };
-
-  google.maps.event.addDomListener(rightArrow, 'click', log()) /*  updateMarker(model.slidePostion)*/
+      }else {
+      location = markerLocation.pittsburghLocations;
+      for (prop in location){
+         google.maps.Marker({position: location[prop]}) = NaN;
+      };
+      }
+    }
+  );
 
 };
  //new google.maps.Marker({position: markerLocation.pittsburghLocations.upperStClair, map: map});
@@ -56,7 +60,13 @@ var markerLocation = {
                               chesterField: { lat:40.440282, lng:-79.963111},
                               Duquesne: {lat:40.436801, lng: -79.990828},
                               Rockwell: {lat:40.437545, lng: -79.993642}
-                            }
+                            },
+        displayMarkerLocation : function (location){
+          for (prop in location){
+            new google.maps.Marker({position: location[prop], map: map});
+            console.log(location[prop]);
+          }
+        }
 
 };
 
