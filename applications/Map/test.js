@@ -1,4 +1,13 @@
-var object = {
+function log () {
+  console.log("hello");
+
+}
+
+log();
+log();
+
+
+/*var object = {
 
   name: "mike",
   age: ["kevin ", "smith"],
@@ -10,4 +19,4 @@ for (boom in object ){
 
   console.log(object[boom]);
 
-}
+}*/

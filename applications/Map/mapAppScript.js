@@ -20,10 +20,20 @@ function initMap() {
   var marker = new google.maps.Marker({position: pittsburgh, map: map});
   var rightArrow = document.getElementById('rightArrow');
   var leftArrow = leftArrow = document.getElementById("leftArrow");
+  new google.maps.Marker({position: markerLocation.pittsburghLocations.upperStClair, map: map});
 
-  //function updateMarker()
+  function updateMarker(location){
+      if (location == 1 ){
+        for (prop in markerLocation.pittsburghLocations){
+             new google.maps.Marker({position: markerLocation.pittsburghLocations[prop], map: map});
+        };
+      };
+  };
+  function log (){
+    console.log("hello");
+  };
 
-  google.maps.event.addDomListener(rightArrow, 'click', function () {console.log (model.slidePostion);})
+  google.maps.event.addDomListener(rightArrow, 'click', log()) /*  updateMarker(model.slidePostion)*/
 
 };
  //new google.maps.Marker({position: markerLocation.pittsburghLocations.upperStClair, map: map});
