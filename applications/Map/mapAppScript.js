@@ -28,7 +28,8 @@ function initMap() {
     if (model.slidePostion == 1 || model.slidePostion == 4 || model.slidePostion == 3  ){
       location = markerLocation.pittsburghLocations ;
       for (prop in location){
-        new google.maps.Marker({position: location[prop], map: map});
+        markers.push( google.maps.Marker({position: location[prop], map: map}));
+        console.log(markers);
       };
       }else {
       location = markerLocation.pittsburghLocations;
