@@ -1,96 +1,21 @@
-window.onload = addListeners;
+//window.onload = addListeners;
 var map;
 var markers = [];
 var rightArrow ;
 var leftArrow ;
 var x = 1;
 
-function addListeners() {
+/*function addListeners() {
   rightArrow = document.getElementById('rightArrow');
   rightArrow.onclick = handleRightArrow;
 
   leftArrow = document.getElementById("leftArrow");
   leftArrow.onclick = handleLeftArrow;
 
-};
+};*/
 
 
-function initMap() {
-  //USE ARRAY TO MAKE MARKERS
-  var pittsburgh = {lat: 40.44062479999999, lng: -79.99588640000002};
-  var map = new google.maps.Map(document.getElementById('map'), {zoom: 10, center: pittsburgh});
-  var marker = new google.maps.Marker({position: pittsburgh, map: map});
-  var rightArrow = document.getElementById('rightArrow');
-  var leftArrow = document.getElementById("leftArrow");
-  function removeMarkers() {
-      for (i=0; i<markers.length;i++){
-        markers[i].setMap(null);
-      };
-  };
 
-// adds pittsburgh neighborhoods to the Map
-  google.maps.event.addDomListener(rightArrow , 'click', function (location){
-    function addMarkers(location){
-
-      for (prop in location){
-        console.log(markers);
-        markers.push (new google.maps.Marker({position: location[prop], map: map}));
-        console.log(markers);
-
-      };
-    };
-
-
-    if (model.slidePostion == 1  ){
-      removeMarkers();
-      addMarkers(markerLocation.pittsburghLocations);
-
-      } else if (model.slidePostion == 2   ){
-          removeMarkers();
-          addMarkers(markerLocation.personalLocations);
-
-      }else if (model.slidePostion == 4 || model.slidePostion == 3   ){
-          addMarkers(markerLocation.pittsburghLocations);
-          addMarkers(markerLocation.personalLocations);
-
-      }else {
-        removeMarkers();
-        };
-      }
-
-  );
-  google.maps.event.addDomListener(leftArrow, 'click', function (location){
-    function addMarkers(location){
-
-      for (prop in location){
-        console.log(markers);
-        markers.push (new google.maps.Marker({position: location[prop], map: map}));
-        console.log(markers);
-
-      };
-    };
-
-
-    if (model.slidePostion == 1  ){
-      removeMarkers();
-      addMarkers(markerLocation.pittsburghLocations);
-
-      } else if (model.slidePostion == 2   ){
-          removeMarkers();
-          addMarkers(markerLocation.personalLocations);
-
-      }else if (model.slidePostion == 4 || model.slidePostion == 3   ){
-          addMarkers(markerLocation.pittsburghLocations);
-          addMarkers(markerLocation.personalLocations);
-
-      }else {
-        removeMarkers();
-        };
-      }
-
-  );
-
-};
  //new google.maps.Marker({position: markerLocation.pittsburghLocations.upperStClair, map: map});
 
 
@@ -150,11 +75,6 @@ var view = {
       messageArea.innerHTML = msg;
 
     },
-    createMarkers : function(markerLocation){
-
-
-
-    },
 
 
 
@@ -165,7 +85,7 @@ var view = {
               this.displayMessage("<h2>WELCOME!</h2>");
           }else if (model.slidePostion == 1){
               this.displayMessage("<p>Above is ariel view of the city of Pittsburgh which is my hometown. I highlighted important landmarks and places that were important to me while growing up. Each position will be marked on the map as you click through the slides. Each marker is clickable and will have more information about the marker.</p>");
-              this.createMarkers(markerLocation.pittsburghLocations);
+
           }else if (model.slidePostion == 2){
               this.displayMessage("<p>First, let us look at some the famous neighborhood and landmarks of the city of Pittsburgh that have had a large impact on my life. Feel free to examine the areas by clicking the markers on the map!</p>");
           }else if (model.slidePostion == 3){
@@ -204,5 +124,85 @@ function handleRightArrow(){
 
 function handleLeftArrow(){
   controller.ProcessRequest("left");
+
+};
+
+function initMap() {
+  //USE ARRAY TO MAKE MARKERS
+  var pittsburgh = {lat: 40.44062479999999, lng: -79.99588640000002};
+  var map = new google.maps.Map(document.getElementById('map'), {zoom: 10, center: pittsburgh});
+  var marker = new google.maps.Marker({position: pittsburgh, map: map});
+  var rightArrow = document.getElementById('rightArrow');
+  var leftArrow = document.getElementById("leftArrow");
+  function removeMarkers() {
+      for (i=0; i<markers.length;i++){
+        markers[i].setMap(null);
+      };
+  };
+
+// adds pittsburgh neighborhoods to the Map
+  google.maps.event.addDomListener(rightArrow , 'click', function (location){
+    handleRightArrow();
+    function addMarkers(location){
+
+      for (prop in location){
+        console.log(markers);
+        markers.push (new google.maps.Marker({position: location[prop], map: map}));
+        console.log(markers);
+
+      };
+    };
+
+
+    if (model.slidePostion == 1  ){
+      removeMarkers();
+      addMarkers(markerLocation.pittsburghLocations);
+
+      } else if (model.slidePostion == 2   ){
+          removeMarkers();
+          addMarkers(markerLocation.personalLocations);
+
+      }else if (model.slidePostion == 4 || model.slidePostion == 3   ){
+          addMarkers(markerLocation.pittsburghLocations);
+          addMarkers(markerLocation.personalLocations);
+
+      }else {
+        removeMarkers();
+        };
+      }
+
+  );
+  google.maps.event.addDomListener(leftArrow, 'click', function (location){
+    handleLeftArrow();
+    
+    function addMarkers(location){
+
+      for (prop in location){
+        console.log(markers);
+        markers.push (new google.maps.Marker({position: location[prop], map: map}));
+        console.log(markers);
+
+      };
+    };
+
+
+    if (model.slidePostion == 1  ){
+      removeMarkers();
+      addMarkers(markerLocation.pittsburghLocations);
+
+      } else if (model.slidePostion == 2   ){
+          removeMarkers();
+          addMarkers(markerLocation.personalLocations);
+
+      }else if (model.slidePostion == 4 || model.slidePostion == 3   ){
+          addMarkers(markerLocation.pittsburghLocations);
+          addMarkers(markerLocation.personalLocations);
+
+      }else {
+        removeMarkers();
+        };
+      }
+
+  );
 
 };

@@ -1,22 +1,15 @@
-function log () {
-  console.log("hello");
+
+
+var model ={
+  array: [1,2,3,4],
+  arrayPosition: 0
+
+
+
+
 
 }
+console.log(model.arrayPosition);
 
-log();
-log();
-
-
-/*var object = {
-
-  name: "mike",
-  age: ["kevin ", "smith"],
-  lastName: "Calabrese"
-
-}
-
-for (boom in object ){
-
-  console.log(object[boom]);
-
-}*/
+model.arrayPosition = model.arrayPosition + 1 ;
+console.log(model.arrayPosition);
