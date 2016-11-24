@@ -21,23 +21,73 @@ function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {zoom: 10, center: pittsburgh});
   var marker = new google.maps.Marker({position: pittsburgh, map: map});
   var rightArrow = document.getElementById('rightArrow');
-  var leftArrow = leftArrow = document.getElementById("leftArrow");
+  var leftArrow = document.getElementById("leftArrow");
+  function removeMarkers() {
+      for (i=0; i<markers.length;i++){
+        markers[i].setMap(null);
+      };
+  };
 
 // adds pittsburgh neighborhoods to the Map
-  google.maps.event.addDomListener(rightArrow || leftArrow, 'click', function (location){
-    if (model.slidePostion == 1 || model.slidePostion == 4 || model.slidePostion == 3  ){
-      location = markerLocation.pittsburghLocations ;
+  google.maps.event.addDomListener(rightArrow , 'click', function (location){
+    function addMarkers(location){
+
       for (prop in location){
-        markers.push( google.maps.Marker({position: location[prop], map: map}));
         console.log(markers);
+        markers.push (new google.maps.Marker({position: location[prop], map: map}));
+        console.log(markers);
+
       };
+    };
+
+
+    if (model.slidePostion == 1  ){
+      removeMarkers();
+      addMarkers(markerLocation.pittsburghLocations);
+
+      } else if (model.slidePostion == 2   ){
+          removeMarkers();
+          addMarkers(markerLocation.personalLocations);
+
+      }else if (model.slidePostion == 4 || model.slidePostion == 3   ){
+          addMarkers(markerLocation.pittsburghLocations);
+          addMarkers(markerLocation.personalLocations);
+
       }else {
-      location = markerLocation.pittsburghLocations;
-      for (prop in location){
-         google.maps.Marker({position: location[prop]}) = NaN;
-      };
+        removeMarkers();
+        };
       }
-    }
+
+  );
+  google.maps.event.addDomListener(leftArrow, 'click', function (location){
+    function addMarkers(location){
+
+      for (prop in location){
+        console.log(markers);
+        markers.push (new google.maps.Marker({position: location[prop], map: map}));
+        console.log(markers);
+
+      };
+    };
+
+
+    if (model.slidePostion == 1  ){
+      removeMarkers();
+      addMarkers(markerLocation.pittsburghLocations);
+
+      } else if (model.slidePostion == 2   ){
+          removeMarkers();
+          addMarkers(markerLocation.personalLocations);
+
+      }else if (model.slidePostion == 4 || model.slidePostion == 3   ){
+          addMarkers(markerLocation.pittsburghLocations);
+          addMarkers(markerLocation.personalLocations);
+
+      }else {
+        removeMarkers();
+        };
+      }
+
   );
 
 };
