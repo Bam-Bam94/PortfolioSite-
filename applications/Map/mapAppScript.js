@@ -52,12 +52,12 @@ var model = {
   slide: [1,2,3,4,5],
   slidePostion : 0,
   slidePostionMover: function(direction){
-                  if (direction == "right"){
+                  if (direction == "right" & model.slidePostion < 5 & model.slidePostion > -1){
                     model.slidePostion = model.slidePostion + 1;
 
 
 
-                  } else if (direction == "left") {
+                  } else if (direction == "left" & model.slidePostion < 6 & model.slidePostion > 0) {
                       model.slidePostion = model.slidePostion - 1;
 
                   }
@@ -154,15 +154,15 @@ function initMap() {
     };
 
 
-    if (model.slidePostion == 1  ){
+    if (model.slidePostion == 2  ){
       removeMarkers();
       addMarkers(markerLocation.pittsburghLocations);
 
-      } else if (model.slidePostion == 2   ){
+    } else if (model.slidePostion == 3   ){
           removeMarkers();
           addMarkers(markerLocation.personalLocations);
 
-      }else if (model.slidePostion == 4 || model.slidePostion == 3   ){
+      }else if (model.slidePostion == 5 || model.slidePostion == 4   ){
           addMarkers(markerLocation.pittsburghLocations);
           addMarkers(markerLocation.personalLocations);
 
@@ -174,7 +174,7 @@ function initMap() {
   );
   google.maps.event.addDomListener(leftArrow, 'click', function (location){
     handleLeftArrow();
-    
+
     function addMarkers(location){
 
       for (prop in location){
@@ -186,15 +186,15 @@ function initMap() {
     };
 
 
-    if (model.slidePostion == 1  ){
+    if (model.slidePostion == 2  ){
       removeMarkers();
       addMarkers(markerLocation.pittsburghLocations);
 
-      } else if (model.slidePostion == 2   ){
+    } else if (model.slidePostion == 3   ){
           removeMarkers();
           addMarkers(markerLocation.personalLocations);
 
-      }else if (model.slidePostion == 4 || model.slidePostion == 3   ){
+      }else if (model.slidePostion == 4 || model.slidePostion == 5  ){
           addMarkers(markerLocation.pittsburghLocations);
           addMarkers(markerLocation.personalLocations);
 
