@@ -24,6 +24,7 @@ var model =  {
 var controller = {
 
 
+
 };
 
 
@@ -33,3 +34,9 @@ var view = {
 
 
 };
+
+function handleEqualsButton () {
+  var equals = document.getElementById('answer') ;
+  equalsNumber = equals.innerHTML ;
+
+}
