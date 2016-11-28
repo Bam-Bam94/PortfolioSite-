@@ -25,7 +25,17 @@ var model =  {
 
 var controller = {
   answer:,
-  firstParse:
+  splitAnswer: [],
+  firstParse: function(answer) {
+    if (answer.split("()")) {
+
+    }else (answer.split("*")){
+      this.splitAnswer =
+
+    }
+
+    this.splitAnswer = answer.split("+","-","*","/" );
+  },
 
 
 
@@ -44,12 +54,13 @@ function handleEqualsButton () {
   var answer = document.getElementById('answer') ;
   answer = answer.innerHTML ;
   controller.answer = answer;
+  controller.firstParse(answer);
 };
 
 function addEventListners() {
   equalSign = document.getElementById("=");
-  equalSign.addEventListners("click", handleEqualsButton);
+  equalSign.addEventListners("click", handleEqualsButton());
 
   clear = document.getElementById('C');
-  clear.addEventListners("click", handleClear);
+  clear.addEventListners("click", handleClear());
 };
