@@ -1,17 +1,18 @@
-window.onload = addEventListners;
+window.onload = function () {
+
 
 var model =  {
     add : function (a,b) {
         return a + b;
 
-    }
+    },
     minus : function (a,b){
         return a - b;
 
-    }
+    },
     multiply : function (a,b){
       return a * b;
-    }
+    },
     division (a,b){
       return a / b;
     }
@@ -24,27 +25,26 @@ var model =  {
 
 
 var controller = {
-  answer:,
-  splitAnswer: [],
-  firstParse: function(answer) {
-    if (answer.split("()")) {
-
-    }else (answer.split("*")){
-      this.splitAnswer =
-
-    }
-
-    this.splitAnswer = answer.split("+","-","*","/" );
-  },
-
-
-
+  answerHTML:"",
+  AnswerArray: [],
+  makeNumber: function () {
+    for (i=0;i<this.AnswerArray.length;i++){
+      this.answerHTML=this.answerHTML + this.AnswerArray[i];
+    };
+    view.displayValue();
+  }
 
 };
 
 
 var view = {
+     displayValue: function(){
+     displayValue=controller.answerHTML;
+     displayValue= displayValue.toString();
+     console.log(displayValue);
 
+     document.getElementById("answer")[0].placeholder = "hello";
+  }
 
 
 
@@ -52,15 +52,30 @@ var view = {
 
 function handleEqualsButton () {
   var answer = document.getElementById('answer') ;
-  answer = answer.innerHTML ;
-  controller.answer = answer;
-  controller.firstParse(answer);
+
+
 };
 
 function addEventListners() {
   equalSign = document.getElementById("=");
-  equalSign.addEventListners("click", handleEqualsButton());
+  //equalSign.addEventListners("click", handleEqualsButton());
 
   clear = document.getElementById('C');
-  clear.addEventListners("click", handleClear());
+  //clear.addEventListners("click", handleClear());
+};
+
+function addNumber(x){
+ var  NumberForArray = x
+ controller.AnswerArray.push(NumberForArray);
+ controller.makeNumber();
+
+
+  };
+  function addNumberListners(x) {
+    x = 
+    button = document.getElementById(x)
+    button.addEventListners("click", addNumber(x) )
+
+  };
+
 };
