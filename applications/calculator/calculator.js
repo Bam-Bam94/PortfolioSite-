@@ -1,6 +1,9 @@
 window.onload = function () {
 
 
+  var buttonIDs = ["(",")","%","C","7","8","9","/","4","5","6","x","1","2","3","-","0",".","=","+"];
+  var buttonListners= [];
+
 var model =  {
     add : function (a,b) {
         return a + b;
@@ -15,7 +18,7 @@ var model =  {
     },
     division (a,b){
       return a / b;
-      
+
     }
 
 
@@ -72,11 +75,19 @@ function addNumber(x){
 
 
   };
-  function addNumberListners(x) {
-    x =
-    button = document.getElementById(x)
-    button.addEventListners("click", addNumber(x) )
+
+
+  function addNumberListnersList() {
+    for (i=0;i<buttonIDs.length;i++){
+      var buttonName = document.getElementById(buttonIDs[i]);
+      buttonName.addEventListener('click', addNumber);
+      buttonListners.push(buttonName);
+      console.log(buttonListners);
+    };
+
 
   };
+
+  addNumberListnersList();
 
 };
