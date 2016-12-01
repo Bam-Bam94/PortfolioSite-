@@ -15,6 +15,7 @@ var model =  {
     },
     division (a,b){
       return a / b;
+      
     }
 
 
@@ -72,7 +73,7 @@ function addNumber(x){
 
   };
   function addNumberListners(x) {
-    x = 
+    x =
     button = document.getElementById(x)
     button.addEventListners("click", addNumber(x) )
 
