@@ -47,7 +47,8 @@ var view = {
      displayValue= displayValue.toString();
      console.log(displayValue);
 
-     document.getElementById("answer")[0].placeholder = "hello";
+    answer = document.getElementById("answerBox");
+    answer.value = displayValue;
   }
 
 
@@ -69,8 +70,8 @@ function addEventListners() {
 };
 
 function addNumber(x){
- var  NumberForArray = x
- controller.AnswerArray.push(NumberForArray);
+ console.log(x);
+ controller.AnswerArray.push(x);
  controller.makeNumber();
 
 
@@ -80,7 +81,12 @@ function addNumber(x){
   function addNumberListnersList() {
     for (i=0;i<buttonIDs.length;i++){
       var buttonName = document.getElementById(buttonIDs[i]);
-      buttonName.addEventListener('click', addNumber);
+      buttonName.addEventListener('click', function(){
+          //console.log(this.id);
+          addNumber(this.id);
+
+        });
+
       buttonListners.push(buttonName);
       console.log(buttonListners);
     };
