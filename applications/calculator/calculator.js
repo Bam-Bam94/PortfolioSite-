@@ -43,9 +43,9 @@ var controller = {
 
 var view = {
      displayValue: function(){
-     displayValue=controller.answerHTML;
-     displayValue= displayValue.toString();
-     console.log(displayValue);
+       displayValue=controller.answerHTML;
+       displayValue= displayValue.toString();
+       console.log(displayValue);
 
     answer = document.getElementById("answerBox");
     answer.value = displayValue;
@@ -73,6 +73,8 @@ function addNumber(x){
  console.log(x);
  controller.AnswerArray.push(x);
  controller.makeNumber();
+ controller.AnswerArray = [];
+
 
 
   };
