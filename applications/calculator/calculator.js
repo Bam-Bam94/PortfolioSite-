@@ -5,7 +5,14 @@ window.onload = function () {
   var buttonListners= [];
 
 var model =  {
+    getA : function () {
+      a = document.getElementById("answerBox").innerHTML
+        document.getElementById("answerBox").value = 0;
+        return a;
+    },
+    //Stop here
     add : function (a,b) {
+        a = this.getA;
         return a + b;
 
     },
@@ -36,6 +43,11 @@ var controller = {
       this.answerHTML=this.answerHTML + this.AnswerArray[i];
     };
     view.displayValue();
+  },
+  handleSymbol: function(x){
+    if (x == "+"){
+      model.add;
+    }
   }
 
 };
@@ -47,8 +59,8 @@ var view = {
        displayValue= displayValue.toString();
        console.log(displayValue);
 
-    answer = document.getElementById("answerBox");
-    answer.value = displayValue;
+       answer = document.getElementById("answerBox");
+       answer.value = displayValue;
   }
 
 
@@ -56,7 +68,7 @@ var view = {
 };
 
 function handleEqualsButton () {
-  var answer = document.getElementById('answer') ;
+  var answer = document.getElementById('answer');
 
 
 };
@@ -69,11 +81,15 @@ function addEventListners() {
   //clear.addEventListners("click", handleClear());
 };
 
-function addNumber(x){
- console.log(x);
- controller.AnswerArray.push(x);
- controller.makeNumber();
- controller.AnswerArray = [];
+function addPush(x){
+if (isNaN(x) && x!= "."){
+  controller.handleSymbol(x);
+}else{
+  console.log(x);
+  controller.AnswerArray.push(x);
+  controller.makeNumber();
+  controller.AnswerArray = [];
+}
 
 
 
@@ -85,7 +101,7 @@ function addNumber(x){
       var buttonName = document.getElementById(buttonIDs[i]);
       buttonName.addEventListener('click', function(){
           //console.log(this.id);
-          addNumber(this.id);
+          addPush(this.id);
 
         });
 
