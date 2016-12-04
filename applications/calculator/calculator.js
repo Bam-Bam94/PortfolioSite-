@@ -5,27 +5,42 @@ window.onload = function () {
   var buttonListners= [];
 
 var model =  {
+    a : 0,
+    b : 0,
     getA : function () {
-      a = document.getElementById("answerBox").innerHTML
+      a = document.getElementById("answerBox").innerHTML;
         document.getElementById("answerBox").value = 0;
-        return a;
+
     },
     //Stop here
-    add : function (a,b) {
+    add : function (b) {
         a = this.getA;
-        return a + b;
+        b = document.getElementById("answerBox").value;
+        document.getElementById("answerBox").value = a + b;
 
     },
-    minus : function (a,b){
-        return a - b;
+    minus : function (b){
+        a = this.getA;
+        b = document.getElementById("answerBox").value;
+        document.getElementById("answerBox").value = a - b;
 
     },
-    multiply : function (a,b){
-      return a * b;
+    multiply : function (b){
+      a = this.getA;
+      b = document.getElementById("answerBox").value;
+      document.getElementById("answerBox").value= a * b;
     },
-    division (a,b){
-      return a / b;
+    division (b){
+      a = this.getA;
+      b = document.getElementById("answerBox").value;
+      document.getElementById("answerBox").value= a / b;
 
+    },
+    clear : function() {
+      a = 0;
+      b = 0;
+      document.getElementById("answerBox").value = 0;
+      controller.answerHTML= "";
     }
 
 
@@ -47,10 +62,20 @@ var controller = {
   handleSymbol: function(x){
     if (x == "+"){
       model.add;
-    }
-  }
+    }else if (x == "-"){
+      model.minus;
+    }else if (x == "*"){
+      model.multiply;
+    }else if (x == "/"){
+      model.division;
+    }else if (x == "C"){
+      model.clear();
+    };
 
-};
+    }
+  };
+
+
 
 
 var view = {
