@@ -1,7 +1,7 @@
 window.onload = function() {
 
 
-    var buttonIDs = ["(", ")", "%", "C", "7", "8", "9", "/", "4", "5", "6", "x", "1", "2", "3", "-", "0", ".", "=", "+"];
+    var buttonIDs = ["(", ")", "%", "C", "7", "8", "9", "/", "4", "5", "6", "*", "1", "2", "3", "-", "0", ".", "=", "+"];
     var buttonListners = [];
 
     var model = {
@@ -9,20 +9,19 @@ window.onload = function() {
         b: 0,
 
         MathProblem: {
-            //  a: model.a,
-            //  b: model.b,
+
             sign: "",
             doMath: function() {
                 if (model.MathProblem.sign == '+') {
                     document.getElementById("answerBox").value = Number(model.a) + Number(model.b);
-                } else if (MathProblem.sign == '-') {
-                    document.getElementById("answerBox").value = Number(model.a) + Number(model.b);
+                } else if (model.MathProblem.sign == '-') {
+                    document.getElementById("answerBox").value = Number(model.a) - Number(model.b);
 
-                } else if (MathProblem.sign == '*') {
-                    document.getElementById("answerBox").value = Number(model.a) + Number(model.b);
+                } else if (model.MathProblem.sign == '*') {
+                    document.getElementById("answerBox").value = Number(model.a) * Number(model.b);
 
-                } else if (MathProblem.sign == '/') {
-                    document.getElementById("answerBox").value = Number(model.a) + Number(model.b);
+                } else if (model.MathProblem.sign == '/') {
+                    document.getElementById("answerBox").value = Number(model.a) / Number(model.b);
 
                 }
 
@@ -33,32 +32,11 @@ window.onload = function() {
         storeA: function() {
             model.a = document.getElementById("answerBox").value;
             document.getElementById("answerBox").value = 0;
+            controller.answerHTML = "";
 
         },
 
-        /*  add: function(b) {
-                  this.storeA();
-                  b = document.getElementById("answerBox").value;
-                  document.getElementById("answerBox").value = a + b;
 
-              },
-              minus: function(b) {
-                  a = this.getA();
-                  b = document.getElementById("answerBox").value;
-                  document.getElementById("answerBox").value = a - b;
-
-              },
-              multiply: function(b) {
-                  a = this.getA();
-                  b = document.getElementById("answerBox").value;
-                  document.getElementById("answerBox").value = a * b;
-              },
-              division(b) {
-                  a = this.getA();
-                  b = document.getElementById("answerBox").value;
-                  document.getElementById("answerBox").value = a / b;
-
-              },*/
         clear: function() {
             a = 0;
             b = 0;
@@ -86,19 +64,19 @@ window.onload = function() {
             if (x == "+") {
                 model.MathProblem.sign = "+";
                 model.storeA();
-                controller.answerHTML = "";
+
             } else if (x == "-") {
                 model.MathProblem.sign = "-";
                 model.storeA();
-                controller.answerHTML = "";
+
             } else if (x == "*") {
                 model.MathProblem.sign = "*";
                 model.storeA();
-                controller.answerHTML = "";
+
             } else if (x == "/") {
                 model.MathProblem.sign = "/";
                 model.storeA();
-                controller.answerHTML = "";
+
             } else if (x == "C") {
                 model.clear();
             };
@@ -113,7 +91,7 @@ window.onload = function() {
         displayValue: function() {
             displayValue = controller.answerHTML;
             displayValue = displayValue.toString();
-            console.log(displayValue);
+            ;
 
             answer = document.getElementById("answerBox");
             answer.value = displayValue;
@@ -144,7 +122,7 @@ window.onload = function() {
         } else if (isNaN(x) && x != ".") {
             controller.handleSymbol(x);
         } else {
-            console.log(x);
+
             controller.AnswerArray.push(x);
             controller.makeNumber();
             controller.AnswerArray = [];
@@ -159,13 +137,13 @@ window.onload = function() {
         for (i = 0; i < buttonIDs.length; i++) {
             var buttonName = document.getElementById(buttonIDs[i]);
             buttonName.addEventListener('click', function() {
-                //console.log(this.id);
+
                 addPush(this.id);
 
             });
 
             buttonListners.push(buttonName);
-            console.log(buttonListners);
+            
         };
 
 
