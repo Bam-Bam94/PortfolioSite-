@@ -90,8 +90,7 @@ window.onload = function() {
     var view = {
         displayValue: function() {
             displayValue = controller.answerHTML;
-            displayValue = displayValue.toString();
-            ;
+            displayValue = displayValue.toString();;
 
             answer = document.getElementById("answerBox");
             answer.value = displayValue;
