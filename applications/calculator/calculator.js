@@ -1,7 +1,7 @@
 window.onload = function() {
 
 
-    var buttonIDs = ["(", ")", "%", "C", "7", "8", "9", "/", "4", "5", "6", "*", "1", "2", "3", "-", "0", ".", "=", "+"];
+    var buttonIDs = ["C", "7", "8", "9", "/", "4", "5", "6", "*", "1", "2", "3", "-", "0", ".", "=", "+"];
     var buttonListners = [];
 
     var model = {
@@ -143,7 +143,7 @@ window.onload = function() {
             });
 
             buttonListners.push(buttonName);
-            
+
         };
 
 
