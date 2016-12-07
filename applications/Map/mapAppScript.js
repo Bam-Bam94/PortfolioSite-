@@ -75,15 +75,7 @@ var markerLocation = {
             lng: -79.993642
         }
     },
-    displayMarkerLocation: function(location) {
-        for (prop in location) {
-            new google.maps.Marker({
-                position: location[prop],
-                map: map,
-            });
 
-        }
-    }
 
 };
 
@@ -179,7 +171,31 @@ function initMap() {
     });
     var marker = new google.maps.Marker({
         position: pittsburgh,
-        map: map
+        map: map,
+        title: 'Pittsburgh'
+
+    });
+
+    var contentString =
+        '<div id="content">' +
+        '<div id="siteNotice">' +
+
+        '<h1 id="firstHeading" class="firstHeading">Pittsburgh</h1>' +
+        '<div id="bodyContent">' +
+        '<p>Pittsburgh (/ˈpɪtsbərɡ/ pits-burg) is a city in the Commonwealth of Pennsylvania in the United States, and is the county seat of Allegheny County. The Combined Statistical Area (CSA) population of 2,659,937 is the largest in both the Ohio Valley and Appalachia, the second-largest in Pennsylvania after Philadelphia and the 20th-largest in the U.S. Located at the confluence of the Allegheny and Monongahela rivers, which form the Ohio River, Pittsburgh is known as both "the Steel City" for its more than 300 steel-related businesses, and as the "City of Bridges" for its 446 bridges.[3]  ' +
+        '<br><a href=https://en.wikipedia.org/wiki/Pittsburgh>Learn More About Pittsburgh!</a> ' +
+
+        '</div>' +
+        '</div>';
+
+
+
+    var infowindow = new google.maps.InfoWindow({
+        content: contentString
+    });
+
+    marker.addListener('click', function() {
+        infowindow.open(map, marker);
     });
     var rightArrow = document.getElementById('rightArrow');
     var leftArrow = document.getElementById("leftArrow");
@@ -190,26 +206,7 @@ function initMap() {
         };
     };
 
-    var contentStrings = {pittsburgh : '<div id="content">' +
-        '<div id="siteNotice">' +
-        '</div>' +
-        '<h1 id="firstHeading" class="firstHeading">Uluru</h1>' +
-        '<div id="bodyContent">' +
-        '<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
-        'sandstone rock formation in the southern part of the ' +
-        'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) ' +
-        'south west of the nearest large town, Alice Springs; 450&#160;km ' +
-        '(280&#160;mi) by road. Kata Tjuta and Uluru are the two major ' +
-        'features of the Uluru - Kata Tjuta National Park. Uluru is ' +
-        'sacred to the Pitjantjatjara and Yankunytjatjara, the ' +
-        'Aboriginal people of the area. It has many springs, waterholes, ' +
-        'rock caves and ancient paintings. Uluru is listed as a World ' +
-        'Heritage Site.</p>' +
-        '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">' +
-        'https://en.wikipedia.org/w/index.php?title=Uluru</a> ' +
-        '(last visited June 22, 2009).</p>' +
-        '</div>' +
-        '</div>'};
+
 
     // adds pittsburgh neighborhoods to the Map
     google.maps.event.addDomListener(rightArrow, 'click', function(location) {
