@@ -1,9 +1,9 @@
-function addOne (a){
-b =  a + 1 ;
-console.log(b);
-}
+var o = {
+  name : "mike"
 
+};
 
-var c = 3;
+var w = [1,2,3];
+console.log(o.name)
 
-c.addOne(c);
+console.log(w);
