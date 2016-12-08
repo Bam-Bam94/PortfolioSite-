@@ -1,6 +1,7 @@
 //window.onload = addListeners;
 var map;
 var markers = [];
+var infowindows = [];
 var rightArrow;
 var leftArrow;
 var x = 1;
@@ -26,7 +27,7 @@ var markerLocation = {
         upperStClair: {
             lat: 40.320715,
             lng: -80.086033,
-            content  : '<div id="content">' +
+            content: '<div id="content">' +
                 '<div id="siteNotice">' +
 
                 '<h1 id="firstHeading" class="firstHeading">Pittsburgh</h1>' +
@@ -39,50 +40,160 @@ var markerLocation = {
         },
         southSideFlats: {
             lat: 40.428535,
-            lng: -79.976918
+            lng: -79.976918,
+            content: '<div id="content">' +
+                '<div id="siteNotice">' +
+
+                '<h1 id="firstHeading" class="firstHeading">Pittsburgh</h1>' +
+                '<div id="bodyContent">' +
+                '<p>Pittsburgh (/ˈpɪtsbərɡ/ pits-burg) is a city in the Commonwealth of Pennsylvania in the United States, and is the county seat of Allegheny County. The Combined Statistical Area (CSA) population of 2,659,937 is the largest in both the Ohio Valley and Appalachia, the second-largest in Pennsylvania after Philadelphia and the 20th-largest in the U.S. Located at the confluence of the Allegheny and Monongahela rivers, which form the Ohio River, Pittsburgh is known as both "the Steel City" for its more than 300 steel-related businesses, and as the "City of Bridges" for its 446 bridges.[3]  ' +
+                '<br><a href=https://en.wikipedia.org/wiki/Pittsburgh>Learn More About Pittsburgh!</a> ' +
+
+                '</div>' +
+                '</div>'
         },
         thePoint: {
             lat: 40.441797,
-            lng: -80.012784
+            lng: -80.012784,
+            content: '<div id="content">' +
+                '<div id="siteNotice">' +
+
+                '<h1 id="firstHeading" class="firstHeading">Pittsburgh</h1>' +
+                '<div id="bodyContent">' +
+                '<p>Pittsburgh (/ˈpɪtsbərɡ/ pits-burg) is a city in the Commonwealth of Pennsylvania in the United States, and is the county seat of Allegheny County. The Combined Statistical Area (CSA) population of 2,659,937 is the largest in both the Ohio Valley and Appalachia, the second-largest in Pennsylvania after Philadelphia and the 20th-largest in the U.S. Located at the confluence of the Allegheny and Monongahela rivers, which form the Ohio River, Pittsburgh is known as both "the Steel City" for its more than 300 steel-related businesses, and as the "City of Bridges" for its 446 bridges.[3]  ' +
+                '<br><a href=https://en.wikipedia.org/wiki/Pittsburgh>Learn More About Pittsburgh!</a> ' +
+
+                '</div>' +
+                '</div>'
         },
         stripDistrict: {
             lat: 40.455410,
-            lng: -79.977718
+            lng: -79.977718,
+            content: '<div id="content">' +
+                '<div id="siteNotice">' +
+
+                '<h1 id="firstHeading" class="firstHeading">Pittsburgh</h1>' +
+                '<div id="bodyContent">' +
+                '<p>Pittsburgh (/ˈpɪtsbərɡ/ pits-burg) is a city in the Commonwealth of Pennsylvania in the United States, and is the county seat of Allegheny County. The Combined Statistical Area (CSA) population of 2,659,937 is the largest in both the Ohio Valley and Appalachia, the second-largest in Pennsylvania after Philadelphia and the 20th-largest in the U.S. Located at the confluence of the Allegheny and Monongahela rivers, which form the Ohio River, Pittsburgh is known as both "the Steel City" for its more than 300 steel-related businesses, and as the "City of Bridges" for its 446 bridges.[3]  ' +
+                '<br><a href=https://en.wikipedia.org/wiki/Pittsburgh>Learn More About Pittsburgh!</a> ' +
+
+                '</div>' +
+                '</div>'
         },
         oakland: {
             lat: 40.441373,
-            lng: -79.95723
+            lng: -79.95723,
+            content: '<div id="content">' +
+                '<div id="siteNotice">' +
+
+                '<h1 id="firstHeading" class="firstHeading">Pittsburgh</h1>' +
+                '<div id="bodyContent">' +
+                '<p>Pittsburgh (/ˈpɪtsbərɡ/ pits-burg) is a city in the Commonwealth of Pennsylvania in the United States, and is the county seat of Allegheny County. The Combined Statistical Area (CSA) population of 2,659,937 is the largest in both the Ohio Valley and Appalachia, the second-largest in Pennsylvania after Philadelphia and the 20th-largest in the U.S. Located at the confluence of the Allegheny and Monongahela rivers, which form the Ohio River, Pittsburgh is known as both "the Steel City" for its more than 300 steel-related businesses, and as the "City of Bridges" for its 446 bridges.[3]  ' +
+                '<br><a href=https://en.wikipedia.org/wiki/Pittsburgh>Learn More About Pittsburgh!</a> ' +
+
+                '</div>' +
+                '</div>'
         },
         heinzField: {
             lat: 40.446928,
-            lng: -80.015739
+            lng: -80.015739,
+            content: '<div id="content">' +
+                '<div id="siteNotice">' +
+
+                '<h1 id="firstHeading" class="firstHeading">Pittsburgh</h1>' +
+                '<div id="bodyContent">' +
+                '<p>Pittsburgh (/ˈpɪtsbərɡ/ pits-burg) is a city in the Commonwealth of Pennsylvania in the United States, and is the county seat of Allegheny County. The Combined Statistical Area (CSA) population of 2,659,937 is the largest in both the Ohio Valley and Appalachia, the second-largest in Pennsylvania after Philadelphia and the 20th-largest in the U.S. Located at the confluence of the Allegheny and Monongahela rivers, which form the Ohio River, Pittsburgh is known as both "the Steel City" for its more than 300 steel-related businesses, and as the "City of Bridges" for its 446 bridges.[3]  ' +
+                '<br><a href=https://en.wikipedia.org/wiki/Pittsburgh>Learn More About Pittsburgh!</a> ' +
+
+                '</div>' +
+                '</div>'
         },
         PPGPaintsArena: {
             lat: 40.439577,
-            lng: -79.989284
+            lng: -79.989284,
+            content: '<div id="content">' +
+                '<div id="siteNotice">' +
+
+                '<h1 id="firstHeading" class="firstHeading">Pittsburgh</h1>' +
+                '<div id="bodyContent">' +
+                '<p>Pittsburgh (/ˈpɪtsbərɡ/ pits-burg) is a city in the Commonwealth of Pennsylvania in the United States, and is the county seat of Allegheny County. The Combined Statistical Area (CSA) population of 2,659,937 is the largest in both the Ohio Valley and Appalachia, the second-largest in Pennsylvania after Philadelphia and the 20th-largest in the U.S. Located at the confluence of the Allegheny and Monongahela rivers, which form the Ohio River, Pittsburgh is known as both "the Steel City" for its more than 300 steel-related businesses, and as the "City of Bridges" for its 446 bridges.[3]  ' +
+                '<br><a href=https://en.wikipedia.org/wiki/Pittsburgh>Learn More About Pittsburgh!</a> ' +
+
+                '</div>' +
+                '</div>'
         }
     },
 
     personalLocations: {
         USCHighschool: {
             lat: 40.334751,
-            lng: -80.070774
+            lng: -80.070774,
+            content: '<div id="content">' +
+                '<div id="siteNotice">' +
+
+                '<h1 id="firstHeading" class="firstHeading">Pittsburgh</h1>' +
+                '<div id="bodyContent">' +
+                '<p>Pittsburgh (/ˈpɪtsbərɡ/ pits-burg) is a city in the Commonwealth of Pennsylvania in the United States, and is the county seat of Allegheny County. The Combined Statistical Area (CSA) population of 2,659,937 is the largest in both the Ohio Valley and Appalachia, the second-largest in Pennsylvania after Philadelphia and the 20th-largest in the U.S. Located at the confluence of the Allegheny and Monongahela rivers, which form the Ohio River, Pittsburgh is known as both "the Steel City" for its more than 300 steel-related businesses, and as the "City of Bridges" for its 446 bridges.[3]  ' +
+                '<br><a href=https://en.wikipedia.org/wiki/Pittsburgh>Learn More About Pittsburgh!</a> ' +
+
+                '</div>' +
+                '</div>'
         },
         RE360: {
             lat: 40.421170,
-            lng: -79.992824
+            lng: -79.992824,
+            content: '<div id="content">' +
+                '<div id="siteNotice">' +
+
+                '<h1 id="firstHeading" class="firstHeading">Pittsburgh</h1>' +
+                '<div id="bodyContent">' +
+                '<p>Pittsburgh (/ˈpɪtsbərɡ/ pits-burg) is a city in the Commonwealth of Pennsylvania in the United States, and is the county seat of Allegheny County. The Combined Statistical Area (CSA) population of 2,659,937 is the largest in both the Ohio Valley and Appalachia, the second-largest in Pennsylvania after Philadelphia and the 20th-largest in the U.S. Located at the confluence of the Allegheny and Monongahela rivers, which form the Ohio River, Pittsburgh is known as both "the Steel City" for its more than 300 steel-related businesses, and as the "City of Bridges" for its 446 bridges.[3]  ' +
+                '<br><a href=https://en.wikipedia.org/wiki/Pittsburgh>Learn More About Pittsburgh!</a> ' +
+
+                '</div>' +
+                '</div>'
         },
         chesterField: {
             lat: 40.440282,
-            lng: -79.963111
+            lng: -79.963111,
+            content: '<div id="content">' +
+                '<div id="siteNotice">' +
+
+                '<h1 id="firstHeading" class="firstHeading">Pittsburgh</h1>' +
+                '<div id="bodyContent">' +
+                '<p>Pittsburgh (/ˈpɪtsbərɡ/ pits-burg) is a city in the Commonwealth of Pennsylvania in the United States, and is the county seat of Allegheny County. The Combined Statistical Area (CSA) population of 2,659,937 is the largest in both the Ohio Valley and Appalachia, the second-largest in Pennsylvania after Philadelphia and the 20th-largest in the U.S. Located at the confluence of the Allegheny and Monongahela rivers, which form the Ohio River, Pittsburgh is known as both "the Steel City" for its more than 300 steel-related businesses, and as the "City of Bridges" for its 446 bridges.[3]  ' +
+                '<br><a href=https://en.wikipedia.org/wiki/Pittsburgh>Learn More About Pittsburgh!</a> ' +
+
+                '</div>' +
+                '</div>'
         },
         Duquesne: {
             lat: 40.436801,
-            lng: -79.990828
+            lng: -79.990828,
+            content: '<div id="content">' +
+                '<div id="siteNotice">' +
+
+                '<h1 id="firstHeading" class="firstHeading">Pittsburgh</h1>' +
+                '<div id="bodyContent">' +
+                '<p>Pittsburgh (/ˈpɪtsbərɡ/ pits-burg) is a city in the Commonwealth of Pennsylvania in the United States, and is the county seat of Allegheny County. The Combined Statistical Area (CSA) population of 2,659,937 is the largest in both the Ohio Valley and Appalachia, the second-largest in Pennsylvania after Philadelphia and the 20th-largest in the U.S. Located at the confluence of the Allegheny and Monongahela rivers, which form the Ohio River, Pittsburgh is known as both "the Steel City" for its more than 300 steel-related businesses, and as the "City of Bridges" for its 446 bridges.[3]  ' +
+                '<br><a href=https://en.wikipedia.org/wiki/Pittsburgh>Learn More About Pittsburgh!</a> ' +
+
+                '</div>' +
+                '</div>'
         },
         Rockwell: {
             lat: 40.437545,
-            lng: -79.993642
+            lng: -79.993642,
+            content: '<div id="content">' +
+                '<div id="siteNotice">' +
+
+                '<h1 id="firstHeading" class="firstHeading">Pittsburgh</h1>' +
+                '<div id="bodyContent">' +
+                '<p>Pittsburgh (/ˈpɪtsbərɡ/ pits-burg) is a city in the Commonwealth of Pennsylvania in the United States, and is the county seat of Allegheny County. The Combined Statistical Area (CSA) population of 2,659,937 is the largest in both the Ohio Valley and Appalachia, the second-largest in Pennsylvania after Philadelphia and the 20th-largest in the U.S. Located at the confluence of the Allegheny and Monongahela rivers, which form the Ohio River, Pittsburgh is known as both "the Steel City" for its more than 300 steel-related businesses, and as the "City of Bridges" for its 446 bridges.[3]  ' +
+                '<br><a href=https://en.wikipedia.org/wiki/Pittsburgh>Learn More About Pittsburgh!</a> ' +
+
+                '</div>' +
+                '</div>'
         }
     },
 
@@ -229,15 +340,30 @@ function initMap() {
             handleRightArrow();
 
             function addMarkers(location) {
-//THIS IS IT!!!!!!!!!!
+
                 for (prop in location) {
 
                     markers.push(new google.maps.Marker({
                         position: location[prop],
                         map: map,
-                        animation: google.maps.Animation.DROP
+                        animation: google.maps.Animation.DROP,
+
+                        addListenerToMaker: function() {
+                            this.addListener('click', function() {
+                                infowindow.open(map, this);
+                            })
+                        }
                     }));
 
+                    infowindows.push(new google.maps.InfoWindow({
+                        content: location[prop].content
+
+                    }));
+                    console.log(infowindows)
+                };
+                for (i = 0; i < markers.length; i++) {
+                    var location = markers[i];
+                    location.addListenerToMaker();
 
                 };
             };
