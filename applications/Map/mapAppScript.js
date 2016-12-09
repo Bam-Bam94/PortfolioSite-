@@ -30,10 +30,10 @@ var markerLocation = {
             content: '<div id="content">' +
                 '<div id="siteNotice">' +
 
-                '<h1 id="firstHeading" class="firstHeading">Pittsburgh</h1>' +
+                '<h1 id="firstHeading" class="firstHeading">Upper St. Clair</h1>' +
                 '<div id="bodyContent">' +
-                '<p>Pittsburgh (/ˈpɪtsbərɡ/ pits-burg) is a city in the Commonwealth of Pennsylvania in the United States, and is the county seat of Allegheny County. The Combined Statistical Area (CSA) population of 2,659,937 is the largest in both the Ohio Valley and Appalachia, the second-largest in Pennsylvania after Philadelphia and the 20th-largest in the U.S. Located at the confluence of the Allegheny and Monongahela rivers, which form the Ohio River, Pittsburgh is known as both "the Steel City" for its more than 300 steel-related businesses, and as the "City of Bridges" for its 446 bridges.[3]  ' +
-                '<br><a href=https://en.wikipedia.org/wiki/Pittsburgh>Learn More About Pittsburgh!</a> ' +
+                '<p>An affluent suburb located about 10 miles (16 km) south of Pittsburgh, Upper St. Clair possesses a nationally recognized school district. The population was 19,229 at the 2010 census.</p>' +
+                '<br><a href=https://en.wikipedia.org/wiki/Upper_St._Clair_Township,_Allegheny_County,_Pennsylvania>Learn More About Upper St. Clair!</a> ' +
 
                 '</div>' +
                 '</div>'
@@ -46,8 +46,8 @@ var markerLocation = {
 
                 '<h1 id="firstHeading" class="firstHeading">Pittsburgh</h1>' +
                 '<div id="bodyContent">' +
-                '<p>Pittsburgh (/ˈpɪtsbərɡ/ pits-burg) is a city in the Commonwealth of Pennsylvania in the United States, and is the county seat of Allegheny County. The Combined Statistical Area (CSA) population of 2,659,937 is the largest in both the Ohio Valley and Appalachia, the second-largest in Pennsylvania after Philadelphia and the 20th-largest in the U.S. Located at the confluence of the Allegheny and Monongahela rivers, which form the Ohio River, Pittsburgh is known as both "the Steel City" for its more than 300 steel-related businesses, and as the "City of Bridges" for its 446 bridges.[3]  ' +
-                '<br><a href=https://en.wikipedia.org/wiki/Pittsburgh>Learn More About Pittsburgh!</a> ' +
+                "<p>The South Side Flats is a neighborhood in Pittsburgh, Pennsylvania's South Side area. It is located just south of the Monongahela River. The neighborhood has one of the City of Pittsburgh’s largest concentrations of 19th century homes which has prompted outsiders to call the neighborhood the City’s Georgetown.[4] It includes many bars and restaurants as well as residences. The main throughway in the South Side Flats is East Carson Street. This street is home to a significant portion of Pittsburgh's nightlife.</p>" +
+                '<br><a href=https://en.wikipedia.org/wiki/South_Side_Flats_(Pittsburgh)>Learn More About SouthSide Flats!</a> ' +
 
                 '</div>' +
                 '</div>'
@@ -60,8 +60,8 @@ var markerLocation = {
 
                 '<h1 id="firstHeading" class="firstHeading">Pittsburgh</h1>' +
                 '<div id="bodyContent">' +
-                '<p>Pittsburgh (/ˈpɪtsbərɡ/ pits-burg) is a city in the Commonwealth of Pennsylvania in the United States, and is the county seat of Allegheny County. The Combined Statistical Area (CSA) population of 2,659,937 is the largest in both the Ohio Valley and Appalachia, the second-largest in Pennsylvania after Philadelphia and the 20th-largest in the U.S. Located at the confluence of the Allegheny and Monongahela rivers, which form the Ohio River, Pittsburgh is known as both "the Steel City" for its more than 300 steel-related businesses, and as the "City of Bridges" for its 446 bridges.[3]  ' +
-                '<br><a href=https://en.wikipedia.org/wiki/Pittsburgh>Learn More About Pittsburgh!</a> ' +
+                '<p>Point State Park (locally known as The Point) is a Pennsylvania state park on 36 acres (150,000 m2) in Downtown Pittsburgh, Allegheny County, Pennsylvania, USA, at the confluence of the Allegheny and Monongahela rivers, forming the Ohio River.</p>' +
+                '<br><a href=https://en.wikipedia.org/wiki/Point_State_Park>Learn More About the Point!</a> ' +
 
                 '</div>' +
                 '</div>'
@@ -74,8 +74,8 @@ var markerLocation = {
 
                 '<h1 id="firstHeading" class="firstHeading">Pittsburgh</h1>' +
                 '<div id="bodyContent">' +
-                '<p>Pittsburgh (/ˈpɪtsbərɡ/ pits-burg) is a city in the Commonwealth of Pennsylvania in the United States, and is the county seat of Allegheny County. The Combined Statistical Area (CSA) population of 2,659,937 is the largest in both the Ohio Valley and Appalachia, the second-largest in Pennsylvania after Philadelphia and the 20th-largest in the U.S. Located at the confluence of the Allegheny and Monongahela rivers, which form the Ohio River, Pittsburgh is known as both "the Steel City" for its more than 300 steel-related businesses, and as the "City of Bridges" for its 446 bridges.[3]  ' +
-                '<br><a href=https://en.wikipedia.org/wiki/Pittsburgh>Learn More About Pittsburgh!</a> ' +
+                '<p>The Strip District is a neighborhood in Pittsburgh, Pennsylvania in the United States. It is a one-half square mile area of land northeast of the central business district bordered to the north by the Allegheny River and to the south by portions of the Hill District. The Strip District runs between 13th and 33rd Streets and includes three main thoroughfares — Smallman St., Penn Ave., and Liberty Ave. — as well as various side streets.</p>' +
+                '<br><a href=https://en.wikipedia.org/wiki/Strip_District,_Pittsburgh>Learn More About Strip District!</a> ' +
 
                 '</div>' +
                 '</div>'
@@ -88,8 +88,8 @@ var markerLocation = {
 
                 '<h1 id="firstHeading" class="firstHeading">Pittsburgh</h1>' +
                 '<div id="bodyContent">' +
-                '<p>Pittsburgh (/ˈpɪtsbərɡ/ pits-burg) is a city in the Commonwealth of Pennsylvania in the United States, and is the county seat of Allegheny County. The Combined Statistical Area (CSA) population of 2,659,937 is the largest in both the Ohio Valley and Appalachia, the second-largest in Pennsylvania after Philadelphia and the 20th-largest in the U.S. Located at the confluence of the Allegheny and Monongahela rivers, which form the Ohio River, Pittsburgh is known as both "the Steel City" for its more than 300 steel-related businesses, and as the "City of Bridges" for its 446 bridges.[3]  ' +
-                '<br><a href=https://en.wikipedia.org/wiki/Pittsburgh>Learn More About Pittsburgh!</a> ' +
+                "<p>Oakland is the academic and healthcare center of Pittsburgh, one of the city's major cultural centers, and is Pennsylvania's third largest Downtown. Only Center City Philadelphia and Downtown Pittsburgh can claim more economic and social activity than Oakland.[1] The neighborhood is urban and diverse and is home to several universities, museums, and hospitals, as well as an abundance of shopping, restaurants, recreational activities and students. Oakland is home to the Schenley Farms National Historic District which encompasses two city designated historic districts: the mostly residential Schenley Farms Historic District and the predominantly institutional Oakland Civic Center Historic District. It is also home to the locally designated Oakland Square Historic District.</p>" +
+                '<br><a href=https://en.wikipedia.org/wiki/Oakland_(Pittsburgh)>Learn More About Oakland!</a> ' +
 
                 '</div>' +
                 '</div>'
@@ -102,8 +102,8 @@ var markerLocation = {
 
                 '<h1 id="firstHeading" class="firstHeading">Pittsburgh</h1>' +
                 '<div id="bodyContent">' +
-                '<p>Pittsburgh (/ˈpɪtsbərɡ/ pits-burg) is a city in the Commonwealth of Pennsylvania in the United States, and is the county seat of Allegheny County. The Combined Statistical Area (CSA) population of 2,659,937 is the largest in both the Ohio Valley and Appalachia, the second-largest in Pennsylvania after Philadelphia and the 20th-largest in the U.S. Located at the confluence of the Allegheny and Monongahela rivers, which form the Ohio River, Pittsburgh is known as both "the Steel City" for its more than 300 steel-related businesses, and as the "City of Bridges" for its 446 bridges.[3]  ' +
-                '<br><a href=https://en.wikipedia.org/wiki/Pittsburgh>Learn More About Pittsburgh!</a> ' +
+                "<p>Heinz Field is a stadium located in the North Shore neighborhood of Pittsburgh, Pennsylvania, United States. It primarily serves as the home to the Pittsburgh Steelers of the National Football League (NFL) and the Pittsburgh Panthers of the National Collegiate Athletic Association (NCAA). The stadium opened in 2001, after the controlled implosion of the teams' previous stadium, Three Rivers Stadium. The stadium is named for the locally based H. J. Heinz Company, which purchased the naming rights in 2001. It hosted the 2011 NHL Winter Classic between the Pittsburgh Penguins and Washington Capitals on January 1, 2011. On September 10, 2016 it hosted the Keystone Classic, which featured a renewal of the Penn State-Pitt football rivalry, setting a new attendance record at 69,983 people." +
+                '<br><a href=https://en.wikipedia.org/wiki/Heinz_Field>Learn More About Heinz Field!</a> ' +
 
                 '</div>' +
                 '</div>'
@@ -116,8 +116,8 @@ var markerLocation = {
 
                 '<h1 id="firstHeading" class="firstHeading">Pittsburgh</h1>' +
                 '<div id="bodyContent">' +
-                '<p>Pittsburgh (/ˈpɪtsbərɡ/ pits-burg) is a city in the Commonwealth of Pennsylvania in the United States, and is the county seat of Allegheny County. The Combined Statistical Area (CSA) population of 2,659,937 is the largest in both the Ohio Valley and Appalachia, the second-largest in Pennsylvania after Philadelphia and the 20th-largest in the U.S. Located at the confluence of the Allegheny and Monongahela rivers, which form the Ohio River, Pittsburgh is known as both "the Steel City" for its more than 300 steel-related businesses, and as the "City of Bridges" for its 446 bridges.[3]  ' +
-                '<br><a href=https://en.wikipedia.org/wiki/Pittsburgh>Learn More About Pittsburgh!</a> ' +
+                "<p>PPG Paints Arena[7] is a multi-purpose indoor arena in Pittsburgh, Pennsylvania that serves as home to the Pittsburgh Penguins of the National Hockey League (NHL), and was the home of the Arena Football League's (AFL) Pittsburgh Power from 2011 to 2014. Construction was completed on August 1, 2010,[8] and the arena opened in time for the 2010–11 NHL season.[9] It replaced the Penguins' former arena, Civic Arena (formerly known as Mellon Arena), which was completed in 1961. A ceremonial ground-breaking was held on August 14, 2008. The arena is the first Leadership in Energy and Environmental Design (LEED) gold-certified arena in both the NHL and AFL.[10] As soon as the arena opened in 2010 it was lauded as one of the best arenas in the world, winning both Best New Major Concert Venue in the Pollstar Concert Industry Awards[11] and Best NHL Arena in the Sports Business Journal reader poll.[12] The arena was originally named Consol Energy Center after Consol Energy purchased the naming rights in December 2008; in October 2016, the building was renamed after PPG Industries took over the naming rights.[13][14]</p>" +
+                '<br><a href=https://en.wikipedia.org/wiki/PPG_Paints_Arena>Learn More About PPG Paints Arena</a> ' +
 
                 '</div>' +
                 '</div>'
@@ -236,7 +236,7 @@ var view = {
     position: model.slidePostion,
     slideText: function() {
         if (model.slidePostion == 0) {
-            this.displayMessage("<h2>WELCOME!</h2>");
+            this.displayMessage("<h2>WELCOME !</h2>");
         } else if (model.slidePostion == 1) {
             this.displayMessage("<p>Above is ariel view of the city of Pittsburgh which is my hometown. I highlighted important landmarks and places that were important to me while growing up. Each position will be marked on the map as you click through the slides. Each marker is clickable and will have more information about the marker.</p>");
 
