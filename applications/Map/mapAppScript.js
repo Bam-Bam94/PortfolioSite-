@@ -25,6 +25,7 @@ var markerLocation = {
 
     pittsburghLocations: {
         upperStClair: {
+            name: "upperStClair",
             lat: 40.320715,
             lng: -80.086033,
             content: '<div id="content">' +
@@ -39,6 +40,7 @@ var markerLocation = {
                 '</div>'
         },
         southSideFlats: {
+            name: "southSideFlats",
             lat: 40.428535,
             lng: -79.976918,
             content: '<div id="content">' +
@@ -53,6 +55,7 @@ var markerLocation = {
                 '</div>'
         },
         thePoint: {
+            name: "thePoint",
             lat: 40.441797,
             lng: -80.012784,
             content: '<div id="content">' +
@@ -67,6 +70,7 @@ var markerLocation = {
                 '</div>'
         },
         stripDistrict: {
+            name: "stripDistrict",
             lat: 40.455410,
             lng: -79.977718,
             content: '<div id="content">' +
@@ -81,6 +85,7 @@ var markerLocation = {
                 '</div>'
         },
         oakland: {
+            name: "oakland",
             lat: 40.441373,
             lng: -79.95723,
             content: '<div id="content">' +
@@ -95,6 +100,7 @@ var markerLocation = {
                 '</div>'
         },
         heinzField: {
+            name: "heinzField",
             lat: 40.446928,
             lng: -80.015739,
             content: '<div id="content">' +
@@ -109,6 +115,7 @@ var markerLocation = {
                 '</div>'
         },
         PPGPaintsArena: {
+            name: "PPGPaintsArena",
             lat: 40.439577,
             lng: -79.989284,
             content: '<div id="content">' +
@@ -126,6 +133,7 @@ var markerLocation = {
 
     personalLocations: {
         USCHighschool: {
+            name: "USCHighschool",
             lat: 40.334751,
             lng: -80.070774,
             content: '<div id="content">' +
@@ -140,6 +148,7 @@ var markerLocation = {
                 '</div>'
         },
         RE360: {
+            name: "RE360",
             lat: 40.421170,
             lng: -79.992824,
             content: '<div id="content">' +
@@ -154,6 +163,7 @@ var markerLocation = {
                 '</div>'
         },
         chesterField: {
+            name: "chesterField",
             lat: 40.440282,
             lng: -79.963111,
             content: '<div id="content">' +
@@ -168,6 +178,7 @@ var markerLocation = {
                 '</div>'
         },
         Duquesne: {
+            name: "Duquesne",
             lat: 40.436801,
             lng: -79.990828,
             content: '<div id="content">' +
@@ -182,6 +193,7 @@ var markerLocation = {
                 '</div>'
         },
         Rockwell: {
+            name: "Rockwell",
             lat: 40.437545,
             lng: -79.993642,
             content: '<div id="content">' +
@@ -344,22 +356,28 @@ function initMap() {
                 for (prop in location) {
 
                     markers.push(new google.maps.Marker({
+                        name: location[prop],
                         position: location[prop],
                         map: map,
                         animation: google.maps.Animation.DROP,
-
+                        content: location[prop],
                         addListenerToMaker: function() {
+
                             this.addListener('click', function() {
-                                infowindow.open(map, this);
+                                console.log(location[prop]);
+                                //infowindows[3].open(map, this);
                             })
                         }
                     }));
 
                     infowindows.push(new google.maps.InfoWindow({
+                        name: location[prop],
                         content: location[prop].content
 
                     }));
                     console.log(infowindows)
+
+                    i++;
                 };
                 for (i = 0; i < markers.length; i++) {
                     var location = markers[i];
