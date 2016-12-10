@@ -356,7 +356,7 @@ function initMap() {
                 for (prop in location) {
 
                     markers.push(new google.maps.Marker({
-                        name: location[prop],
+                        name: location[prop].name,
                         position: location[prop],
                         map: map,
                         animation: google.maps.Animation.DROP,
@@ -364,18 +364,26 @@ function initMap() {
                         addListenerToMaker: function() {
 
                             this.addListener('click', function() {
-                                console.log(location[prop]);
-                                //infowindows[3].open(map, this);
+
+                              console.log(this.name);
+
+                               for (i = 0; i < markers.length; i++) {
+                                    if (this.name == infowindows[i].name) {
+                                        infowindows[i].open(map, this);
+                                    }
+                                }
+                            
                             })
                         }
                     }));
 
                     infowindows.push(new google.maps.InfoWindow({
-                        name: location[prop],
+                        name: location[prop].name,
                         content: location[prop].content
 
                     }));
                     console.log(infowindows)
+                    console.log(location[prop].name);
 
                     i++;
                 };
