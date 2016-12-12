@@ -26,9 +26,9 @@ var markerLocation = {
     pittsburghLocations: {
 
         pittsburgh: {
-          name: "pittsburgh",
-          lat: 40.44062479999999,
-          lng: -79.99588640000002,
+            name: "pittsburgh",
+            lat: 40.44062479999999,
+            lng: -79.99588640000002,
             content: '<div id="content">' +
                 '<div id="siteNotice">' +
 
@@ -363,6 +363,10 @@ function initMap() {
         };
     };
 
+    function removeInfoWindows() {
+        infowindows = [];
+    };
+
 
 
     // adds pittsburgh neighborhoods to the Map
@@ -383,7 +387,7 @@ function initMap() {
 
                             this.addListener('click', function() {
 
-                                console.log(this.name);
+
 
                                 for (i = 0; i < markers.length; i++) {
                                     if (this.name == infowindows[i].name) {
@@ -400,8 +404,7 @@ function initMap() {
                         content: location[prop].content
 
                     }));
-                    console.log(infowindows)
-                    console.log(location[prop].name);
+
 
                     i++;
                 };
@@ -414,19 +417,25 @@ function initMap() {
 
 
             if (model.slidePostion == 2) {
+                removeInfoWindows();
                 removeMarkers();
                 addMarkers(markerLocation.pittsburghLocations);
 
             } else if (model.slidePostion == 3) {
+                removeInfoWindows();
                 removeMarkers();
                 addMarkers(markerLocation.personalLocations);
 
             } else if (model.slidePostion == 5 || model.slidePostion == 4) {
+                removeInfoWindows();
                 addMarkers(markerLocation.pittsburghLocations);
                 addMarkers(markerLocation.personalLocations);
 
             } else {
+
                 removeMarkers();
+                removeInfoWindows();
+
             };
         }
 
@@ -437,32 +446,62 @@ function initMap() {
             function addMarkers(location) {
 
                 for (prop in location) {
-                    console.log(markers);
+
                     markers.push(new google.maps.Marker({
+                        name: location[prop].name,
                         position: location[prop],
                         map: map,
-                        animation: google.maps.Animation.DROP
+                        animation: google.maps.Animation.DROP,
+                        content: location[prop],
+                        addListenerToMaker: function() {
+
+                            this.addListener('click', function() {
+
+
+
+                                for (i = 0; i < markers.length; i++) {
+                                    if (this.name == infowindows[i].name) {
+                                        infowindows[i].open(map, this);
+                                    }
+                                }
+
+                            })
+                        }
                     }));
-                    console.log(markers);
+
+                    infowindows.push(new google.maps.InfoWindow({
+                        name: location[prop].name,
+                        content: location[prop].content
+
+                    }));
+
+
+                    i++;
+                };
+                for (i = 0; i < markers.length; i++) {
+                    var location = markers[i];
+                    location.addListenerToMaker();
 
                 };
             };
-
-
             if (model.slidePostion == 2) {
                 removeMarkers();
+                removeInfoWindows();
                 addMarkers(markerLocation.pittsburghLocations);
 
             } else if (model.slidePostion == 3) {
                 removeMarkers();
+                removeInfoWindows();
                 addMarkers(markerLocation.personalLocations);
 
             } else if (model.slidePostion == 4 || model.slidePostion == 5) {
+                removeInfoWindows();
                 addMarkers(markerLocation.pittsburghLocations);
                 addMarkers(markerLocation.personalLocations);
 
             } else {
                 removeMarkers();
+                removeInfoWindows();
             };
         }
 
