@@ -1,3 +1,5 @@
+
+
 function showSkills() {
     var whiteBackground = document.getElementById('white-background');
     var skillBoxAlert = document.getElementById('skillBoxAlert');
