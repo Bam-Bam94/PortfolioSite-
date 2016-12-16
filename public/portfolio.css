@@ -352,6 +352,7 @@ div#exampleProjectIntro {
 }
 
 #skillBoxAlert {
+    display: none;
     position: fixed;
     width: 480px;
     z-index: 9999;
