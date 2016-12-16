@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+
 }
 
 html, body {
@@ -8,6 +9,8 @@ html, body {
     margin: 0;
     width: 100%;
     display: table;
+  
+
 }
 
 div.wrapper {
@@ -352,14 +355,16 @@ div#exampleProjectIntro {
 }
 
 #skillBoxAlert {
-    display: none;
-    position: fixed;
+    display:none;
+    position: absolute;
     width: 480px;
     z-index: 9999;
     border-radius: 10px;
     background-color: #1e1e1e;
     align-items: center;
     opacity: 1;
+    left: 100px;
+    top: 100px;
 }
 
 #skillBoxAlert-header {
@@ -393,13 +398,15 @@ div#exampleProjectIntro {
 
 #ProjectBoxAlert {
     display: none;
-    position: fixed;
+    position: absolute;
     width: 480px;
     z-index: 9999;
     border-radius: 10px;
     background-color: #1e1e1e;
     align-items: center;
     opacity: 1;
+    left: 500px;
+    top: 500px;
 }
 
 #ProjectBoxAlert-header {

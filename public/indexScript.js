@@ -1,11 +1,10 @@
-
-
 function showSkills() {
     var whiteBackground = document.getElementById('white-background');
     var skillBoxAlert = document.getElementById('skillBoxAlert');
 
     whiteBackground.style.display = "block";
     skillBoxAlert.style.display = "block";
+    skillBoxAlert.style.position = "fixed";
 
     var winWidth = window.innerWidth;
     var winHeight = window.innerHeight;
@@ -21,6 +20,7 @@ function Back() {
     whiteBackground.style.display = "none";
     skillBoxAlert.style.display = "none";
     ProjectBoxAlert.style.display = "none";
+    ProjectBoxAlert.style.position = "";
 }
 
 function showProjects() {
@@ -29,6 +29,7 @@ function showProjects() {
 
     whiteBackground.style.display = "block";
     skillBoxAlert.style.display = "block";
+    skillBoxAlert.style.position = "fixed";
 
     var winWidth = window.innerWidth;
     var winHeight = window.innerHeight;
