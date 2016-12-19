@@ -23,9 +23,10 @@ var data = {
   from: 'Mailgun <postmaster@sandboxbd32b566d95344fb935cd060e31ffd99.mailgun.org>',
   to: 'mikeclbrs@gmail.com',
   subject: 'Hello',
-  text: 'Email: '+ req.body.email+
-        'Phonenumber: ' + req.body.phonenumber+
-        'Message: ' + req.body.message
+  text: 'Name: '+ req.body.user.name+
+        'Email: '+ req.body.user.email+
+        'Phonenumber: ' + req.body.user.phonenumber+
+        'Message: ' + req.body.user.message
 };
 
 mailgun.messages().send(data, function (error, body) {
