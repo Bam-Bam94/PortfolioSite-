@@ -10,7 +10,7 @@ app.get('/', function(req, res) {
 
 })
 
-var port = 8888;
+var port = 80;
 app.listen(port);
 console.log("now listing to port", port);
 
@@ -30,9 +30,9 @@ app.post("/", function(req, res) {
         to: 'mikeclbrs@gmail.com',
         subject: 'Hello',
         text: 'Name: ' + req.body.name +
-            '<br />Email: ' + req.body.email +
-            '<br />Phonenumber: ' + req.body.phonenumber +
-            '<br />Message: ' + req.body.message
+            '\nEmail: ' + req.body.email +
+            '\nPhonenumber: ' + req.body.phoneNumber +
+            '\nMessage: ' + req.body.message
     };
 
     mailgun.messages().send(data, function(error, body) {
