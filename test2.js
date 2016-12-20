@@ -13,7 +13,7 @@ var port = 80;
 app.listen(port);
 console.log("now listing to port", port);
 
-app.use(express.bodyParser());
+//app.use(express.bodyParser());
 
 
 app.post("/", function(req,res){
