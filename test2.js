@@ -10,7 +10,7 @@ app.get('/', function(req, res) {
 
 })
 
-var port = 80;
+var port = 8888;
 app.listen(port);
 console.log("now listing to port", port);
 
