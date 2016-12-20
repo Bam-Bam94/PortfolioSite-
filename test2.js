@@ -1,5 +1,6 @@
 var express = require('express');
 var app = express();
+var bodyParser = require('body-parser');
 
 
 app.use(express.static('public'));
@@ -13,7 +14,7 @@ var port = 80;
 app.listen(port);
 console.log("now listing to port", port);
 
-//app.use(express.bodyParser());
+app.use(bodyParser());
 
 
 app.post("/", function(req,res){
