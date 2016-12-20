@@ -240,7 +240,7 @@ div#skillBadgesBar.logo {
 
 div.logo {
     max-width: 131px;
-    padding: 50px;
+    padding: 30px;
 }
 
 div#download {
@@ -455,4 +455,11 @@ div.portfolioProjectsDescription {
     display: table-cell;
     padding-top: 0px;
     vertical-align: top;
+}
+
+img#node{
+  height: 100px;
+  width: 100px;
+  float: right;
+
 }
