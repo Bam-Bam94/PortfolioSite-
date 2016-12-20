@@ -159,7 +159,7 @@ var markerLocation = {
 
                 '<h1 id="firstHeading" class="firstHeading">Upper St. Clair HighSchool</h1>' +
                 '<div id="bodyContent">' +
-                '<p>Home of the Upper St Clair Panthers. This is where I attended HighSchool. Upper St Clair is known around the area as a very prestigious public High School</p>' +
+                '<p>Home of the Upper St Clair Panthers. This is where I attended High School. Upper St Clair is known around the area as a very prestigious public High School</p>' +
                 '<br><a href=https://en.wikipedia.org/wiki/Upper_St._Clair_High_School>Learn More About Upper St. Clair High School!</a> ' +
 
                 '</div>' +
