@@ -9,7 +9,7 @@ html, body {
     margin: 0;
     width: 100%;
     display: table;
-  
+
 
 }
 
@@ -259,6 +259,7 @@ button {
     font-family: 'Trirong', serif;
     margin: 50px;
     cursor: pointer;
+    font-size: 18px;
 }
 
 div#download button {
