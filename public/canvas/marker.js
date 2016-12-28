@@ -1,7 +1,7 @@
-function marker(x,y,xmove,ymove) {
+function marker(x,y,xmove,ymove,ymax,ymin) {
   this.x = x;
   this.y = y;
-  this.weld = false;
+  
   //this.v = createVector(this.x,this.y); 
   
   this.history = [];
@@ -9,22 +9,18 @@ function marker(x,y,xmove,ymove) {
   
   //stop here 
   this.update = function(){
-    if(this.weld =true){
+    if (this.y >=ymin  && this.y <= ymax){
     this.x = this.x + xmove;
-    this.weld = false;
-    
-      
-    }else{
     this.y = this.y - ymove;
-    this.weld = true;
-      
     }
+    
+    
     this.v = createVector(this.x,this.y);
     this.history.push(this.v);
     console.log(this.history);
   }
   
-  this.show = function(){
+  this.show = function(){ 
     fill(0,0,0);
     ellipse(this.x,this.y,10,10);
     

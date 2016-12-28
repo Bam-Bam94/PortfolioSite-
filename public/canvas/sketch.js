@@ -6,9 +6,12 @@ function setup() {
   createCanvas(600,400);
  
   lo = new logo();
-  spark = new spark();
-  markers.push(new marker(210,260,.5,1));
-  //markers.push(new marker(380,130));
+  markers.push(new marker(210,150,0,-1,260,150))
+  markers.push(new marker(210,150,.3,-1,260,150))
+  markers.push(new marker(276,150,-.3,-1,260,150))
+  markers.push(new marker(276,150,0,-1,260,150))
+
+
  
 
 }
@@ -18,8 +21,8 @@ function draw() {
  lo.strokeWeight();
  lo.show();
  lo.fadeInColor();
- spark.fall();
- spark.show();
+ 
+ 
   for (var i = 0 ; i <= markers.length ; i++){
       if (i < markers.length){
       var pos = markers[i]; 
