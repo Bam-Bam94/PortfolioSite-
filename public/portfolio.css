@@ -28,6 +28,13 @@ div.topNav {
     padding-top: 30px;
     padding-bottom: 30px;
     margin-bottom: 100px;
+
+}
+
+
+div.topNav li {
+    font-size: 25px;
+
 }
 
 .navbar {
@@ -461,5 +468,12 @@ img#node{
   height: 100px;
   width: 100px;
   float: right;
+
+}
+#sketch-holder {
+  width: auto;
+  display: block;
+  text-align: center;
+
 
 }

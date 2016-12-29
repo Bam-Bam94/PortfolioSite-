@@ -1,10 +1,14 @@
+
 var lo;
 var spark;
 markers = []
+var myDiv
 
 function setup() {
-    createCanvas(600, 400);
+  var cnv = createCanvas(600, 400);
+  cnv.parent('sketch-holder');
 
+  //myDiv.style("display", "fixed");
     lo = new logo();
     markers.push(new marker(225, 150, 0, -.5, 260, 150,1))
     markers.push(new marker(225, 150, .15, -.3, 215 , 150,1))
@@ -19,7 +23,7 @@ function setup() {
 }
 
 function draw() {
-    background(51, 205, 116);
+    background(255, 255, 255);
     lo.fill();
     lo.strokeWeight();
     lo.show();
