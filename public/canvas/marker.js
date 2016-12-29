@@ -1,7 +1,7 @@
-function marker(x, y, xmove, ymove, ymax, ymin,ymult) {
+function marker(x, y, xmove, ymove, ymax, ymin,xmult) {
     this.x = x;
     this.y = y;
-    this.ymulti = 1;
+    this.xmulti = 1;
 
 
     //this.v = createVector(this.x,this.y);
@@ -12,9 +12,9 @@ function marker(x, y, xmove, ymove, ymax, ymin,ymult) {
     //stop here
     this.update = function() {
         if (this.y >= ymin && this.y <= ymax) {
-            this.x = this.x + xmove;
-            this.ymulti = this.ymulti*ymult;
-            this.y = this.y - ymove*this.ymulti;
+            this.xmulti = this.xmulti*xmult;
+            this.x = this.x + xmove * this.xmulti;
+            this.y = this.y - ymove;
 
         }
 

@@ -6,14 +6,12 @@ function setup() {
     createCanvas(600, 400);
 
     lo = new logo();
-    markers.push(new marker(210, 150, 0, -.5, 260, 150,1))
-    markers.push(new marker(210, 150, .15, -.3, 215 , 150,1))
-    markers.push(new marker(276, 150, -.15, -.3, 215, 150,1))
-    markers.push(new marker(276, 150, 0, -.5, 260, 150,1))
-    markers.push(new marker(276, 150, 0, -.5, 260, 150,1))
-    markers.push(new marker(384.5, 150, -1, -.2, 205, 150,1.036))
-    markers.push(new marker(381, 260, -1, .2, 280, 210,1.0356))
-
+    markers.push(new marker(225, 150, 0, -.5, 260, 150,1))
+    markers.push(new marker(225, 150, .15, -.3, 215 , 150,1))
+    markers.push(new marker(290, 150, -.15, -.3, 215, 150,1))
+    markers.push(new marker(290, 150, 0, -.5, 260, 150,1))
+    markers.push(new marker(335, 205, .0009, 1, 211, 150,1.165))
+    markers.push(new marker(335, 205, .0009, -1, 260, 205,1.165))
 
 
 
